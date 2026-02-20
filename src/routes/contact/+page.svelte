@@ -1,11 +1,11 @@
 <svelte:head>
   <title>Contact me</title>
-      <nav>
-    <a href="../">Home</a>
-    <a href="../projects/">Projects</a>
-    <a href="../cv/">Resume</a>
-    <a href="../contact/" class="current">Contact</a>
-    <a href="https://github.com/hiromitsdm" target="_blank">GitHub</a>
+    <nav>
+      <a href="/">Home</a> 
+      <a href="/projects">Projects</a> 
+      <a class="current" href="/contact">Contact</a> 
+      <a href="/resume">Resume</a> 
+      <a href="https://github.com/hiromitsdm" target="_blank">GitHub</a> 
     </nav>
     <h1>Contact</h1>
         

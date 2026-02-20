@@ -1,11 +1,11 @@
 <svelte:head>
   <title>Resume</title>
     <nav>
-        <a href="../">Home</a>
-        <a href="../projects/">Projects</a>
-        <a href="../cv/" class="current">Resume</a>
-        <a href="../contact/">Contact</a>
-        <a href="https://github.com/hiromitsdm" target="_blank">GitHub</a>
+      <a href="/">Home</a> 
+      <a  href="/projects">Projects</a> 
+      <a href="/contact">Contact</a> 
+      <a class="current" href="/resume">Resume</a> 
+      <a href="https://github.com/hiromitsdm" target="_blank">GitHub</a> 
     </nav>
     
     <h1>Hiroki (Hiro) Ogasawara</h1>
