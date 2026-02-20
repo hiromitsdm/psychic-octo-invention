@@ -1,5 +1,6 @@
 <script>
   import projects from '$lib/projects.json';
+  import Project from "$lib/Project.svelte";
 </script>
 
 <svelte:head>
@@ -14,16 +15,14 @@
       <a href="https://github.com/hiromitsdm" target="_blank">GitHub</a> 
 </nav>
 
-<h1>My Projects</h1>
-
+<h1>{projects.length} Projects</h1>
 
 <div class="projects">
-        <article>
-            <h2>A2 Exploratory Data Analysis</h2>
-            <img src="./A2/Fig 8.png" alt="">
-            <p><a href="A2/A2_report.html">View A2 Report</a></p>
-        </article>
-        <article>
+  {#each projects as p}
+    <Project data={p} />
+  {/each}
+</div>
+        <!-- <article>
             <h2>A3 Visualization Critique & Redesign</h2>
             <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="">
             <p><a href="A3/A3_report.html">View A3 Report</a></p>
@@ -82,5 +81,4 @@
             <h2>Nemo voluptates voluptas placeat.</h2>
             <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="">
             <p>Quia repellat aliquid quisquam minima, autem atque rerum in adipisci eius possimus sequi culpa suscipit aliquam tempore eum similique inventore. Itaque aliquid corporis maiores voluptate, sed fugiat nemo commodi. Ea?</p>
-        </article>
-</div>
+        </article> -->
