@@ -3,7 +3,7 @@
     <nav>
         <a href="../">Home</a>
         <a href="../projects/">Projects</a>
-        <a href="../cv/" class="current">CV</a>
+        <a href="../cv/" class="current">Resume</a>
         <a href="../contact/">Contact</a>
         <a href="https://github.com/hiromitsdm" target="_blank">GitHub</a>
     </nav>
