@@ -1,19 +1,26 @@
 <script>
-  <pre>{JSON.stringify(projects, null, 2)}</pre>
   import projects from '$lib/projects.json';
 </script>
 
+<pre>{JSON.stringify(projects, null, 2)}</pre>
+
+
 <svelte:head>
   <title>Projects</title>
-    <nav>
+</svelte:head>
+
+<nav>
       <a href="/">Home</a> 
       <a class="current" href="/projects">Projects</a> 
       <a href="/contact">Contact</a> 
       <a href="/resume">Resume</a> 
       <a href="https://github.com/hiromitsdm" target="_blank">GitHub</a> 
-    </nav>
-    <h1>My Projects</h1>
-    <div class="projects">
+</nav>
+
+<h1>My Projects</h1>
+
+
+<div class="projects">
         <article>
             <h2>A2 Exploratory Data Analysis</h2>
             <img src="./A2/Fig 8.png" alt="">
@@ -79,6 +86,4 @@
             <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="">
             <p>Quia repellat aliquid quisquam minima, autem atque rerum in adipisci eius possimus sequi culpa suscipit aliquam tempore eum similique inventore. Itaque aliquid corporis maiores voluptate, sed fugiat nemo commodi. Ea?</p>
         </article>
-    </div>
-
-</svelte:head>
+</div>
