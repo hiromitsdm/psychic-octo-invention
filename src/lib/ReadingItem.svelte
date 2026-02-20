@@ -4,37 +4,41 @@
 
 <article>
   <img src={data.image} alt={data.title}>
-  <h3>{data.title}</h3>
-  <p class="author">{data.author}</p>
+  <div class="info">
+    <h3>{data.title}</h3>
+    <p class="author">{data.author}</p>
+  </div>
 </article>
 
 <style>
   article {
-    border: 1px solid #ddd;
-    padding: 1rem;
-    border-radius: 8px;
     display: flex;
-    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
   }
 
   img {
-    width: 100%;
-    height: 200px;
+    width: 80px;
+    height: 120px;
     object-fit: cover;
-    border-radius: 4px;
-    margin-bottom: 1rem;
+    flex-shrink: 0;
+  }
+
+  .info {
+    flex: 1;
   }
 
   h3 {
-    margin: 0 0 0.5rem 0;
-    font-size: 1rem;
+    margin: 0 0 0.3rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
     line-height: 1.3;
   }
 
   .author {
     margin: 0;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     color: #666;
-    font-style: italic;
   }
 </style>
