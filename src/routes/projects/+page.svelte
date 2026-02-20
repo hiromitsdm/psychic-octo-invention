@@ -1,11 +1,11 @@
 <svelte:head>
   <title>Projects</title>
     <nav>
-    <a href=".">Home</a>
-    <a href="." class="current">Projects</a>
-    <a href="cv">Resume</a>
-    <a href="contact">Contact</a>
-    <a href="https://github.com/hiromitsdm" target="_blank">GitHub</a>
+    <a href="/">Home</a> 
+    <a class="current" href="/projects">Projects</a> 
+    <a href="/contact">Contact</a> 
+    <a href="/resume">Resume</a> 
+    <a href="https://github.com/hiromitsdm" target="_blank">GitHub</a> 
     </nav>
     <h1>My Projects</h1>
     <div class="projects">
