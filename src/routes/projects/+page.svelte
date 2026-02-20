@@ -2,9 +2,6 @@
   import projects from '$lib/projects.json';
 </script>
 
-<pre>{JSON.stringify(projects, null, 2)}</pre>
-
-
 <svelte:head>
   <title>Projects</title>
 </svelte:head>
