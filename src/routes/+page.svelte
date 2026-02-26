@@ -8,7 +8,7 @@
 <nav>
     <a href="." class="current">Home</a>
     <a href="projects">Projects</a>
-    <a href="cv">Resume</a>
+    <a href="resume">Resume</a>
     <a href="contact">Contact</a>
     <a href="https://github.com/hiromitsdm" target="_blank">GitHub</a>
 </nav>
