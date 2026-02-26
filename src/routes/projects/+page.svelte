@@ -8,10 +8,10 @@
 </svelte:head>
 
 <nav>
-      <a href="/">Home</a> 
-      <a class="current" href="/projects">Projects</a> 
-      <a href="/resume">Resume</a> 
-      <a href="/contact">Contact</a> 
+      <a href=" ">Home</a> 
+      <a class="current" href="projects">Projects</a> 
+      <a href="resume">Resume</a> 
+      <a href="contact">Contact</a> 
       <a href="https://github.com/hiromitsdm" target="_blank">GitHub</a> 
 </nav>
 
