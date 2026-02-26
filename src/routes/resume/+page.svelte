@@ -1,5 +1,7 @@
 <svelte:head>
   <title>Resume</title>
+</svelte:head>
+
     <nav>
       <a href="/">Home</a> 
       <a href="/projects">Projects</a> 
@@ -171,4 +173,3 @@
             <li><strong>Hobby:</strong> Running (Captain of TOYOTA long-distance road relay team for 100+ members, Half Marathon PR: 1:23:11, Marathon PR: 2:53:25, Joining Boston Marathon in 2026)</li>
         </ul>
     </section>
-</svelte:head>

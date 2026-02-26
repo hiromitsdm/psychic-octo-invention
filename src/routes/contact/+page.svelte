@@ -1,5 +1,7 @@
 <svelte:head>
   <title>Contact me</title>
+</svelte:head>
+
     <nav>
       <a href="/">Home</a> 
       <a href="/projects">Projects</a> 
@@ -25,4 +27,3 @@
     <button>Submit</button>
     </form>
     <link rel="stylesheet" href="../style.css">
-</svelte:head>
