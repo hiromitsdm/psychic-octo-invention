@@ -3,6 +3,8 @@ import { base } from "$app/paths";
 import { page } from "$app/stores";
 import "../style.css";
 
+let colorScheme = "light dark";
+
 let pages = [
   {url: "/", title: "About"},
   {url: "/projects", title: "Projects"},
@@ -14,7 +16,8 @@ let pages = [
 
 <label class="color-scheme-switch">
   Theme:
-  <select>
+  {colorScheme}
+  <select bind:value={colorScheme}>
     <option value="light dark">Automatic</option>
     <option value="light">Light</option>
     <option value="dark">Dark</option>
