@@ -4,6 +4,8 @@ import { page } from "$app/stores";
 import "../style.css";
 
 let colorScheme = "light dark";
+let root = globalThis.document?.documentElement;
+$: root?.style.setProperty("color-scheme", colorScheme);
 
 let pages = [
   {url: "/", title: "About"},
@@ -16,7 +18,6 @@ let pages = [
 
 <label class="color-scheme-switch">
   Theme:
-  {colorScheme}
   <select bind:value={colorScheme}>
     <option value="light dark">Automatic</option>
     <option value="light">Light</option>
