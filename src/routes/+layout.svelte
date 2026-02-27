@@ -1,5 +1,6 @@
 <script>
 import { base } from "$app/paths";
+import { page } from "$app/stores";
 
 let pages = [
   {url: "/", title: "About"},
@@ -17,5 +18,9 @@ let pages = [
     >{p.title}</a>
   {/each}
 </nav>
+
+{
+  JSON.stringify($page)
+}
 
 <slot />
