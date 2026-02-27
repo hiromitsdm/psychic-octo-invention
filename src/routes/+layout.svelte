@@ -1,6 +1,7 @@
 <script>
 import { base } from "$app/paths";
 import { page } from "$app/stores";
+import "../style.css";
 
 let pages = [
   {url: "/", title: "About"},
@@ -28,6 +29,10 @@ let pages = [
 <slot />
 
 <style>
+:root {
+    color-scheme: light dark;
+}
+
 nav a.current {
     border-bottom: 0.4em solid oklch(80% 3% 200); /* Thick bottom border to highlight current page */
     padding-bottom: 0.1em; /* Reduce bottom padding to counter border height (0.5em - 0.4em = 0.1em) */
