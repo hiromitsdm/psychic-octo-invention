@@ -4,15 +4,12 @@ function handleSubmit(event) {
     let form = event.target;
     let data = new FormData(form);
 
-    let params = [];
+    let url = form.action + "?";
     for (let [name, value] of data) {
-        params.push(name + "=" + encodeURIComponent(value));
+        url += (name + "=" + encodeURIComponent(value) + "&");
     }
-    let url = form.action + "?" + params.join("&");
 
-    let a = document.createElement("a");
-    a.href = url;
-    a.click();
+    location.href = url;
 }
 </script>
 
