@@ -14,9 +14,13 @@ let pages = [
 <nav>
   {#each pages as p}
     <a href={base + p.url}
-      class:current={true}
-      target={p.url.startsWith("http") ? "_blank" : null}
-    >{p.title}</a>
+        class:current={p.url === "/" // is this link the home page?
+        ? $page.url.pathname === (base + "/") // if yes - set current = true if the path name matches. Else, set current = true if the path name starts correctly
+        : $page.url.pathname.startsWith(base + p.url)}
+        target={p.url.startsWith("http") ? "_blank": null}
+>
+  {p.title}
+</a>
   {/each}
 </nav>
 
