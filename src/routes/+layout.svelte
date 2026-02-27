@@ -42,6 +42,15 @@ let pages = [
     color-scheme: light dark;
 }
 
+.color-scheme-switch {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: inline-flex;
+    gap: 4px;
+    font-size: 80%;
+}
+
 nav a.current {
     border-bottom: 0.4em solid oklch(80% 3% 200); /* Thick bottom border to highlight current page */
     padding-bottom: 0.1em; /* Reduce bottom padding to counter border height (0.5em - 0.4em = 0.1em) */
