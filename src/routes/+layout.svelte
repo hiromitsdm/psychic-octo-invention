@@ -3,9 +3,16 @@ import { base } from "$app/paths";
 import { page } from "$app/stores";
 import "../style.css";
 
+let localStorage = globalThis.localStorage ?? {};
 let colorScheme = "light dark";
+
+if (localStorage.colorScheme) {
+  colorScheme = localStorage.colorScheme;
+}
+
 let root = globalThis.document?.documentElement;
 $: root?.style.setProperty("color-scheme", colorScheme);
+$: localStorage.colorScheme = colorScheme;
 
 let pages = [
   {url: "/", title: "About"},
