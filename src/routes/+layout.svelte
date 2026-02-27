@@ -12,6 +12,15 @@ let pages = [
 ];
 </script>
 
+<label class="color-scheme-switch">
+  Theme:
+  <select>
+    <option value="light dark">Automatic</option>
+    <option value="light">Light</option>
+    <option value="dark">Dark</option>
+  </select>
+</label>
+
 <nav>
   {#each pages as p}
     <!-- <a href={base + p.url} -->
