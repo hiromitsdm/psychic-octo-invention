@@ -2,14 +2,6 @@
   <title>Resume</title>
 </svelte:head>
 
-    <nav>
-      <a href=".">Home</a> 
-      <a href="projects">Projects</a> 
-      <a href="contact">Contact</a> 
-      <a class="current" href="resume">Resume</a> 
-      <a href="https://github.com/hiromitsdm" target="_blank">GitHub</a> 
-    </nav>
-    
     <h1>Hiroki (Hiro) Ogasawara</h1>
     <p>(617) 251-4592 | <a href="mailto:hoga@mit.edu">hoga@mit.edu</a></p>
     
