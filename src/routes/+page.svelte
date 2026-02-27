@@ -50,6 +50,12 @@
     border-radius: 8px;
   }
 
+  @media (prefers-color-scheme: dark) {
+    .reading-sidebar {
+      background-color: black;
+    }
+  }
+
   .reading-sidebar h2 {
     margin-top: 0;
     margin-bottom: 1rem;
