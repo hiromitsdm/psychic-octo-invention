@@ -45,15 +45,9 @@
 
   .reading-sidebar {
     flex: 1;
-    background-color: #f5f5f5;
+    background-color: light-dark(#f5f5f5, black);
     padding: 1.5rem;
     border-radius: 8px;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    .reading-sidebar {
-      background-color: black;
-    }
   }
 
   .reading-sidebar h2 {
