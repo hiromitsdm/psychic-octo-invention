@@ -12,7 +12,9 @@ let pages = [
 
 <nav>
   {#each pages as p}
-    <a href={base + p.url}>{p.title}</a>
+    <a href={base + p.url}
+      target={p.url.startsWith("http") ? "_blank" : null}
+    >{p.title}</a>
   {/each}
 </nav>
 
