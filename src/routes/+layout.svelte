@@ -19,8 +19,4 @@ let pages = [
   {/each}
 </nav>
 
-{
-  JSON.stringify($page)
-}
-
 <slot />
