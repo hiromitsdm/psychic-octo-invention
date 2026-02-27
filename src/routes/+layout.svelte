@@ -14,6 +14,7 @@ let pages = [
 <nav>
   {#each pages as p}
     <a href={base + p.url}
+      class:current={true}
       target={p.url.startsWith("http") ? "_blank" : null}
     >{p.title}</a>
   {/each}
