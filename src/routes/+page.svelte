@@ -7,12 +7,12 @@
   let githubData = null; // This will eventually hold our Github stats
   let loading = true; // This will be true *until* the fetch's promise resolves to a value
   let error = null; // If the API call resulted in an error, it will go into this variable
-</script>
 
-function retrieveGithubData(){
+  function retrieveGithubData(){
   console.log("Page has been mounted!")
-}
-onMount(retrieveGithubData);
+  }
+  onMount(retrieveGithubData);
+</script>
 
 <div class="intro-section">
   <div class="bio">
