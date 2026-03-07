@@ -37,7 +37,7 @@
   {
     "title": "MIT Driverless Autonomous Racing Team Co-General Manager",
     "image": "images/mit driverless.jpg",
-    "description": "As Co-GM of MIT Driverless, led a 28-member team developing a full autonomous racing stack for the Abu Dhabi Autonomous Racing League. Oversaw vehicle architecture, sensor fusion pipeline design, and team operations across mechanical, electrical, and software subteams.",
+    "description": "As Co-GM of MIT Driverless, led a 28-member team developing a full autonomous racing stack for the Abu Dhabi Autonomous Racing League. Oversaw team operations across engineering and bisiness operations.",
     "year": 2026,
     "story": "Running an autonomous racing team is equal parts engineering and organizational design. The technical problems are hard — reliably detecting track boundaries at 150 km/h in desert light conditions is not a solved problem — but the harder challenge is keeping 28 people aligned when they're working in parallel on systems that depend on each other. I spent as much time on meeting structure and team dynamics to ensure effective collaboration."
   },
