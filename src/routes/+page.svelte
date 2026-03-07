@@ -9,7 +9,7 @@
   let error = null; // If the API call resulted in an error, it will go into this variable
   let data = fetch("https://api.github.com/users/hiromitsdm");
  
-  async function retrieveGithubData(){
+  onMount(async () => {
     try {
       console.log("Page has been mounted!")
       let response = await fetch("https://api.github.com/users/hiromitsdm");
@@ -20,9 +20,7 @@
       error = err;
     }
     loading = false;
-  }
-
-  onMount(retrieveGithubData);
+  });
 </script>
 
 <div class="intro-section">
@@ -42,6 +40,14 @@
     </div>
   </div>
 </div>
+
+{#if loading}
+    <p>Loading...</p>
+{:else if error}
+    <p>Something went wrong: {error.message}</p>
+{:else}
+    The data is {JSON.stringify(githubData)}
+{/if}
 
 <h2>Latest Projects</h2>
 
