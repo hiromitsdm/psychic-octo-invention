@@ -4,6 +4,9 @@
 
   let scrollyProgress = 0;
   let sorted_projects = projects.sort((a, b) => a.year - b.year);
+  let progressPerProject = 100 / sorted_projects.length;
+
+  $: activeProjectIdx = Math.min(sorted_projects.length - 1, Math.floor(scrollyProgress / progressPerProject));
 </script>
 
 <Scrolly bind:progress={scrollyProgress}>
@@ -17,7 +20,7 @@
   {/each}
 
   <svelte:fragment slot="viz">
-    {scrollyProgress}
+    {activeProjectIdx}
   </svelte:fragment>
 </Scrolly>
 
