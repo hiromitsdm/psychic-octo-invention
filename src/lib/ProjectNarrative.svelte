@@ -9,64 +9,50 @@
   $: activeProjectIdx = Math.min(sorted_projects.length - 1, Math.floor(scrollyProgress / progressPerProject));
 </script>
 
-<Scrolly bind:progress={scrollyProgress}>
-  {#each sorted_projects as project}
-    <section>
-      <div>
-        <h3>{project.title}</h3>
-        <p>{project.story}</p>
-      </div>
-    </section>
-  {/each}
+<div class="scrolly-wrapper">
+  <Scrolly bind:progress={scrollyProgress}>
+    {#each sorted_projects as project}
+      <section class="step">
+        <div class="step-content">
+          <h3>{project.title}</h3>
+          <p>{project.story}</p>
+        </div>
+      </section>
+    {/each}
 
-  <svelte:fragment slot="viz">
-    <div>
-      <h3>{sorted_projects[activeProjectIdx].year}</h3>
-      <img src={sorted_projects[activeProjectIdx].image} alt={sorted_projects[activeProjectIdx].title} />
-    </div>
-  </svelte:fragment>
-</Scrolly>
+    <svelte:fragment slot="viz">
+      <div class="project-detail">
+        <h3>{sorted_projects[activeProjectIdx].year}</h3>
+        <img src={sorted_projects[activeProjectIdx].image} alt={sorted_projects[activeProjectIdx].title} />
+      </div>
+    </svelte:fragment>
+  </Scrolly>
+</div>
 
 <style>
-  .story-step {
-    padding: 4rem 2rem;
-    min-height: 50vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  .scrolly-wrapper {
+    width: min(1000ch, 60vw);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
-  .year {
-    font-size: 0.85rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: light-dark(#888, #aaa);
+  .step {
+    min-height: 80vh;
+    padding: 2rem;
   }
 
-  .story-step h3 {
-    margin: 0.25rem 0 0.75rem;
-    font-size: 1.25rem;
+  .step-content {
+    border-left: 3px solid #7b2d8b;
+    padding: 1.5rem 2rem;
   }
 
-  .story-step p {
-    line-height: 1.7;
-    color: light-dark(#333, #ccc);
-    max-width: 40ch;
-  }
-
-  .viz {
+  .project-detail {
+    padding: 2rem;
     width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
-  .viz img {
+  .project-detail img {
     width: 100%;
-    height: 70vh;
-    object-fit: cover;
-    border-radius: 8px;
   }
 </style>
