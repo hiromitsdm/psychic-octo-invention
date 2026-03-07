@@ -20,7 +20,10 @@
   {/each}
 
   <svelte:fragment slot="viz">
-    {activeProjectIdx}
+    <div>
+      <h3>{sorted_projects[activeProjectIdx].year}</h3>
+      <img src={sorted_projects[activeProjectIdx].image} alt={sorted_projects[activeProjectIdx].title} />
+    </div>
   </svelte:fragment>
 </Scrolly>
 
