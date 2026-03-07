@@ -2,16 +2,16 @@
   {
     "title": "My First Project - A2 Exploratory Data Analysis",
     "image": "images/A2_Fig 8.png",
-    "description": "This project explores..."
+    "description": "This exploratory data analysis examines Greater Boston's housing supply crisis through the lens of zoning, income, and educational rankings. The project identifies five areas (Nahant, Swampscott, Melrose, Norwood, and Arlington) with single-family-only zoning and high concentrations of low-income households as top priorities for upzoning, finds mixed evidence that historical restrictive zoning still concentrates BIMPOC populations in non-restrictive zones, and reveals a tentative pattern where higher-ranked school districts correlate with higher-income households. The analysis concludes that zoning, income, and school quality are interconnected factors requiring systems-level thinking to address housing affordability."
   },
   {
     "title": "My Second Project - A3 Visualization Critique & Redesign",
     "image": "images/A3_Fig 4.png",
-    "description": "In this project, I..."
+    "description": "This project critiques the New York Times' COVID-19 spiral visualization, identifying its lack of a common quantitative datum and insufficient month labeling as key weaknesses despite its attention-grabbing design. Through three exploratory sketches (line chart, virus illustration, grouped bar chart), the analysis explores trade-offs between visual appeal and readability before arriving at a final overlapping area chart design. The redesign prioritizes accurate monthly comparison across 2020-2022 with a shared zero baseline, full month labels, and a 3-year average line that reveals seasonal patterns, deliberately trading the spiral's visual novelty for interpretive clarity and quantitative precision."
   },
   {
     "title": "My Third Project",
-    "image": "images/project3.png",
-    "description": "Another amazing project..."
+    "image": "images/A4_Growth.png",
+    "description": "This project explores the boundary between persuasive and deceptive visualization by creating two opposing arguments about whether the world economy is in a mature phase. The "FOR" visualization uses a logarithmic scale, narrow time window (2015-2019), and cool colors to suggest stability, while the "AGAINST" visualization employs a linear scale, extended timeline (1956-2019), and vibrant colors to emphasize accelerating growth. The analysis reveals how technical choices like scale type and temporal range can powerfully shape interpretation, concluding that ethical visualization depends on whether representations can be naturally and consistently interpreted by diverse audiences rather than deliberately obscuring alternatives."
   }
 ]
