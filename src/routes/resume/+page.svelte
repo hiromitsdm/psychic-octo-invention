@@ -2,8 +2,8 @@
   <title>Resume</title>
 </svelte:head>
 
-    <h1>Hiroki (Hiro) Ogasawara</h1>
-    <p>(617) 251-4592 | <a href="mailto:hoga@mit.edu">hoga@mit.edu</a></p>
+    <h1 style="text-align: center">Hiroki (Hiro) Ogasawara</h1>
+    <p style="text-align: center">(617) 251-4592 | <a href="mailto:hoga@mit.edu">hoga@mit.edu</a></p>
     
     <section>
         <h2>Education</h2>
