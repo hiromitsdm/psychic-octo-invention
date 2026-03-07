@@ -1,31 +1,31 @@
 [
   {
-    "title": "Greater Boston Housing Supply Analysis",
-    "image": "images/A2_Fig 8.png",
-    "description": "This exploratory data analysis examines Greater Boston's housing supply crisis through the lens of zoning, income, and educational rankings. The project identifies five areas (Nahant, Swampscott, Melrose, Norwood, and Arlington) with single-family-only zoning and high concentrations of low-income households as top priorities for upzoning, finds mixed evidence that historical restrictive zoning still concentrates BIMPOC populations in non-restrictive zones, and reveals a tentative pattern where higher-ranked school districts correlate with higher-income households.",
-    "year": 2026,
-    "story": "I started this project expecting to find clear villains in Boston's housing crisis — maybe a few suburbs clinging to exclusionary zoning out of pure self-interest. What I found instead was a web of interconnected incentives where school rankings, property values, and zoning policy all reinforce each other. The five towns I flagged as top upzoning priorities weren't simply wealthy enclaves — they were places where the gap between stated affordability goals and actual land-use policy was widest. That tension between intent and outcome is what I keep coming back to."
+    "title": "2024 MIT SDM Student Leadership Award",
+    "image": "images/student leadership.jpeg",
+    "description": "Received the 2024 MIT System Design and Management Student Leadership Award, recognizing exceptional strategic contributions, leadership, innovation, and systems thinking. Recognized for organizing the Innovation Discovery Japan tour, co-leading the Bay Area Tech Trek, serving as marketing and communications lead for the Netherlands Tech Trek, and contributing to MIT Driverless, MIT Sloan Mobility Club, MIT Motorsports, and the Japanese student community at MIT.",
+    "year": 2024,
+    "story": "I came to SDM to learn systems thinking — I didn't expect the most important systems I'd work on to be people systems. Organizing the Japan Trek meant coordinating across time zones, cultural expectations, and competing priorities before I'd even finished my first semester. The Bay Area and Netherlands Treks added more complexity: different stakeholders, different goals, different definitions of what a successful visit looks like. What I kept finding was that the connective tissue between technical and human systems is exactly where I want to work. The award surprised me. I was just trying to make things run well."
   },
   {
-    "title": "COVID-19 Visualization Critique & Redesign",
-    "image": "images/A3_Fig 4.png",
-    "description": "This project critiques the New York Times' COVID-19 spiral visualization, identifying its lack of a common quantitative datum and insufficient month labeling as key weaknesses despite its attention-grabbing design. Through three exploratory sketches, the analysis explores trade-offs between visual appeal and readability before arriving at a final overlapping area chart design that prioritizes accurate monthly comparison across 2020-2022.",
-    "year": 2026,
-    "story": "The NYT spiral was one of those visualizations that made me stop scrolling — it was beautiful, and I had no idea what it was saying. That friction sent me down a rabbit hole about what visualization is actually for. My redesign traded novelty for clarity: a shared zero baseline, full month labels, and a three-year average line that made the seasonal pattern visible for the first time. Sometimes the most honest design choice is also the least exciting one."
+    "title": "MIT Innovation Discovery Japan 2025 — President",
+    "image": "images/idj.png",
+    "description": "Served as President of Innovation Discovery Japan 2025 (IDJ25), MIT's annual tech trek bringing students and researchers to Japan to explore the country's technology industries, startups, and research institutes. Led the full organizing team, overseeing program design, company visit curation, logistics, and team operations to deliver an immersive experiential learning program for MIT participants.",
+    "year": 2025,
+    "story": "Leading IDJ25 meant being accountable for every part of the experience — from the first company email to the last debrief conversation in Tokyo. What I underestimated was how much the president role is about holding context: knowing why we chose each visit, what each participant was hoping to get out of the trip, and how to recover when things didn't go as planned. Japan's innovation ecosystem is genuinely different from Silicon Valley's, and the program only works if participants leave with that as a felt insight, not just an intellectual one. Getting that right required building a team that cared about the same thing I did."
   },
   {
-    "title": "Persuasion vs. Deception in Data Visualization",
-    "image": "images/A4_Growth.png",
-    "description": "This project explores the boundary between persuasive and deceptive visualization by creating two opposing arguments about whether the world economy is in a mature phase. The 'FOR' visualization uses a logarithmic scale and narrow time window to suggest stability, while the 'AGAINST' visualization employs a linear scale and extended timeline to emphasize accelerating growth.",
-    "year": 2026,
-    "story": "The assignment asked me to argue both sides using the same dataset, and I was surprised by how easy it was. Choosing a log scale versus a linear one, or starting a chart in 2015 versus 1956, are defensible technical decisions — but they can completely flip the story. The uncomfortable conclusion I landed on: most visualization 'best practices' are themselves rhetorical choices, and the line between persuasion and deception is thinner than we like to admit."
+    "title": "MIT Technology Roadmap: Battery Electric Vehicle Platforms",
+    "image": "images/ev platform.jpg",
+    "description": "Contributed to MIT's Battery Electric Vehicle Platforms technology roadmap (2BEV), a level-2 roadmap scoping the full BEV platform — from battery pack and power inverter to electric drivetrain and onboard charger. The roadmap applies OPM modeling, DSM decomposition, and figures of merit analysis to chart a path toward 1000 km range and 50 km/min charge rates by 2035, with five prioritized R&D projects including sodium-ion battery infusion, battery pack modularization, solid-state batteries, and wireless charging.",
+    "year": 2025,
+    "story": "This roadmap put me at the intersection of two things I'd been working on separately: the platform engineering logic I developed at Toyota and the EV strategy work I did at Ford. Building a technology roadmap forces you to be explicit about assumptions that usually stay implicit — what does 'modular' actually mean at the battery pack level, and what does it cost? The financial model was the most clarifying exercise: when you chart discounted cash flows over 16 years to break even, you stop treating architectural decisions as technical choices and start treating them as bets. That shift in framing changed how I think about platform strategy."
   },
   {
     "title": "Toyota Assistant Manager of Body Engineering",
     "image": "images/gryaris body.jpg",
     "description": "Promoted underbody structure sharing with 2 types of vehicles across 3 vehicle companies to optimize structure of installed parts, creating information sharing system between related departments using Toyota Production System approach, executing agile development with overall vehicle planning departments and vehicle body performance evaluation departments.",
     "year": 2023,
-    "story": "Standardization sounds straightforward until you're in a room with engineers from three vehicle companies who each have excellent reasons why their variant is the one that should become the standard. This project taught me that the hardest part of platform engineering isn't the geometry — it's building enough shared context that people can argue about trade-offs rather than talking past each other. The patent came out of a discussion with various people where we finally found the geometry that satisfied everyone's constraints."
+    "story": "Standardization sounds straightforward until you're in a room with engineers from three vehicle companies who each have excellent reasons why their variant is the one that should become the standard. This project taught me that the hardest part of platform engineering isn't the geometry — it's building enough shared context that people can argue about trade-offs rather than talking past each other. The patent came out of a discussion with various people where we finally found the geometry that satisfied everyone's constraints. (14 in total patents & similar rights so far)"
   },
   {
     "title": "Ford Strategy & Planning Leadership Program for Advanced EV Development",
@@ -38,11 +38,11 @@
     "title": "MIT Driverless Autonomous Racing Team Co-General Manager",
     "image": "images/mit driverless.jpg",
     "description": "As Co-GM of MIT Driverless, led a 28-member team developing a full autonomous racing stack for the Abu Dhabi Autonomous Racing League. Oversaw vehicle architecture, sensor fusion pipeline design, and team operations across mechanical, electrical, and software subteams.",
-    "year": 2025,
-    "story": "Running an autonomous racing team is equal parts engineering and organizational design. The technical problems are hard — reliably detecting track boundaries at 150 km/h in desert light conditions is not a solved problem — but the harder challenge is keeping 28 people aligned when they're working in parallel on systems that depend on each other. I spent as much time on meeting structure and documentation standards as I did on the vehicle itself, and I think that's the right trade-off."
+    "year": 2026,
+    "story": "Running an autonomous racing team is equal parts engineering and organizational design. The technical problems are hard — reliably detecting track boundaries at 150 km/h in desert light conditions is not a solved problem — but the harder challenge is keeping 28 people aligned when they're working in parallel on systems that depend on each other. I spent as much time on meeting structure and team dynamics to ensure effective collaboration."
   },
   {
-    "title": "Apple Park Product Architecture Residency",
+    "title": "MIT/Apple Graduate Engineering Leadership Program as Product Architecture Designer",
     "image": "images/apple park.jpg",
     "description": "As an MIT-Riccio Engineering Leadership Resident, embedded with Apple's product architecture team to work on early-stage design for next-generation products. Focused on cross-functional coordination between design, engineering, and supply chain during concept-phase decision making.",
     "year": 2025,
