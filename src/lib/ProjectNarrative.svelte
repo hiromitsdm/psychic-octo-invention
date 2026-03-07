@@ -3,10 +3,11 @@
   import Scrolly from "svelte-scrolly";
 
   let scrollyProgress = 0;
+  let sorted_projects = projects.sort((a, b) => a.year - b.year);
 </script>
 
 <Scrolly bind:progress={scrollyProgress}>
-  {#each projects as project}
+  {#each sorted_projects as project}
     <section>
       <div>
         <h3>{project.title}</h3>
