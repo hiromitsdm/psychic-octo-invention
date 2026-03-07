@@ -24,7 +24,8 @@
     "title": "Toyota Assistant Manager of Body Engineering",
     "image": "images/gryaris body.jpg",
     "description": "Promoted underbody structure sharing with 2 types of vehicles across 3 vehicle companies to optimize structure of installed parts, creating information sharing system between related departments using Toyota Production System approach, executing agile development with overall vehicle planning departments and vehicle body performance evaluation departments.",
-    "year": 2023,
+    "year": 2013,
+    "yearEnd": 2023,
     "story": "Standardization sounds straightforward until you're in a room with engineers from three vehicle companies who each have excellent reasons why their variant is the one that should become the standard. This project taught me that the hardest part of platform engineering isn't the geometry — it's building enough shared context that people can argue about trade-offs rather than talking past each other. The patent came out of a discussion with various people where we finally found the geometry that satisfied everyone's constraints. (14 in total patents & similar rights so far)"
   },
   {

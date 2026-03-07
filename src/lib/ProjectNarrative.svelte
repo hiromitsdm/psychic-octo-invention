@@ -22,7 +22,7 @@
 
     <svelte:fragment slot="viz">
       <div class="project-detail">
-        <h3>{sorted_projects[activeProjectIdx].year}</h3>
+        <h3>{sorted_projects[activeProjectIdx].yearEnd ? `${sorted_projects[activeProjectIdx].year}–${sorted_projects[activeProjectIdx].yearEnd}` : sorted_projects[activeProjectIdx].year}</h3>
         <img src={sorted_projects[activeProjectIdx].image} alt={sorted_projects[activeProjectIdx].title} />
       </div>
     </svelte:fragment>
