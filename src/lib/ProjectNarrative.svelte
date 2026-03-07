@@ -43,7 +43,7 @@
   }
 
   .step-content {
-    border-left: 3px solid #7b2d8b;
+    border-left: 3px solid oklch(80% 3% 200);
     padding: 1.5rem 2rem;
   }
 
