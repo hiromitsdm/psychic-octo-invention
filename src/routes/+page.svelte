@@ -46,7 +46,19 @@
 {:else if error}
     <p>Something went wrong: {error.message}</p>
 {:else}
-    The data is {JSON.stringify(githubData)}
+    <section class="github-stats">
+        <h2>My GitHub Stats</h2>
+        <dl class="stats-grid">
+            <dt>Followers</dt>
+            <dt>Following</dt>
+            <dt>Public Repos</dt>
+            <dt>Public Gists</dt>
+            <dd>{githubData.followers}</dd>
+            <dd>{githubData.following}</dd>
+            <dd>{githubData.public_repos}</dd>
+            <dd>{githubData.public_gists}</dd>
+        </dl>
+    </section>
 {/if}
 
 <h2>Latest Projects</h2>
@@ -79,6 +91,37 @@
   .reading-sidebar h2 {
     margin-top: 0;
     margin-bottom: 1rem;
+  }
+
+  .github-stats {
+    border: 1px solid light-dark(#ddd, #444);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .github-stats h2 {
+    margin-top: 0;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .stats-grid dt {
+    grid-row: 1;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: light-dark(#666, #aaa);
+  }
+
+  .stats-grid dd {
+    grid-row: 2;
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
   }
 
   /* Make it stack on smaller screens */
