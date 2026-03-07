@@ -39,7 +39,8 @@
     "title": "MIT Driverless Autonomous Racing Team Co-General Manager",
     "image": "images/mit driverless.jpg",
     "description": "As Co-GM of MIT Driverless, led a 28-member team developing a full autonomous racing stack for the Abu Dhabi Autonomous Racing League. Oversaw team operations across engineering and bisiness operations.",
-    "year": 2026,
+    "year": 2025,
+    "yearEnd": 2026,
     "story": "Running an autonomous racing team is equal parts engineering and organizational design. The technical problems are hard — reliably detecting track boundaries at 150 km/h in desert light conditions is not a solved problem — but the harder challenge is keeping 28 people aligned when they're working in parallel on systems that depend on each other. I spent as much time on meeting structure and team dynamics to ensure effective collaboration."
   },
   {
@@ -53,7 +54,8 @@
     "title": "Engineering Workflow Startup",
     "image": "images/engineering startup.png",
     "description": "Founding a startup applying Toyota Production System principles to engineering design workflows. Building tools that help product teams eliminate coordination waste, surface bottlenecks earlier, and give engineers more time for work that actually matters.",
-    "year": 2026,
+    "year": 2025,
+    "yearEnd": 2026,
     "story": "Every place I've worked, the engineers I most respected spent a surprising fraction of their time on coordination overhead — tracking down the latest file version, figuring out who owns a decision, re-explaining context that should have been written down. I've been thinking about this problem for years, and I finally have a clear enough point of view to build something. The insight from Toyota is that waste in a design process is just as real as waste on a factory floor — it's just harder to see."
   },
   {
