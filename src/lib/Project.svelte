@@ -6,7 +6,7 @@
 <article>
     <h2>{data.title}</h2>
     <img src="{base}/{data.image}" alt="">
-    <p>{data.description}</p>
+    <p><strong>{data.yearEnd ? `${data.year}–${data.yearEnd}` : data.year}</strong> | {data.description}</p>
 </article>
 
 <style>
