@@ -2,9 +2,18 @@
   import projects from '$lib/projects.json';
   import Project from "$lib/Project.svelte";
   import ProjectNarrative from "$lib/ProjectNarrative.svelte";
+  import { onMount } from 'svelte';
+  import * as d3 from 'd3';
 
   let years = projects.map(proj => proj.year);
   let range = Math.max(...years) - Math.min(...years);
+
+  let rawData = [];
+
+  onMount(async () => {
+    rawData = await d3.json('/lab6_example.json');
+    console.log(rawData);
+  });
 </script>
 
 <svelte:head>
