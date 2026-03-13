@@ -48,6 +48,14 @@
     "story": "The thing that surprised me most about Apple wasn't the secrecy — it was how much ambiguity exists at the concept stage of a product that millions of people will eventually hold in their hands. My job was to help structure the decision process for problems that didn't yet have well-defined requirements. That experience reframed how I think about engineering leadership: the highest-leverage moment isn't optimizing a design, it's asking the right question before the design space closes."
   },
   {
+    "title": "Boston Marathon Qualification",
+    "image": "images/boston.jpeg",
+    "description": "Trained for and completed a qualifying marathon with a 2:53:25 finish, securing a Boston Marathon qualifier. Developed a structured 18-week training plan balancing high-mileage weeks with engineering coursework and team leadership responsibilities at MIT.",
+    "year": 2025,
+    "yearEnd": 2025,
+    "story": "I started running seriously during a period when most of my work felt abstract — a lot of planning, coordination, and strategic thinking without much tangible output. Running gave me something the rest of my life wasn't: an immediate, unambiguous measurement of progress. The 2:53 came after three years of consistent training and two failed qualifier attempts. The lesson I keep carrying back to work is that compounding matters more than intensity — the athletes who run every day at moderate effort almost always beat the ones who train in spikes."
+  },
+  {
     "title": "MIT Driverless Autonomous Racing Team Co-General Manager",
     "image": "images/mit driverless.jpg",
     "description": "As Co-GM of MIT Driverless, led a 28-member team developing a full autonomous racing stack for the Abu Dhabi Autonomous Racing League. Oversaw team operations across engineering and bisiness operations.",
@@ -62,13 +70,5 @@
     "year": 2025,
     "yearEnd": 2026,
     "story": "Every place I've worked, the engineers I most respected spent a surprising fraction of their time on coordination overhead — tracking down the latest file version, figuring out who owns a decision, re-explaining context that should have been written down. I've been thinking about this problem for years, and I finally have a clear enough point of view to build something. The insight from Toyota is that waste in a design process is just as real as waste on a factory floor — it's just harder to see."
-  },
-  {
-    "title": "Boston Marathon Qualification",
-    "image": "images/boston.jpeg",
-    "description": "Trained for and completed a qualifying marathon with a 2:53:25 finish, securing a Boston Marathon qualifier. Developed a structured 18-week training plan balancing high-mileage weeks with engineering coursework and team leadership responsibilities at MIT.",
-    "year": 2026,
-    "yearEnd": 2026,
-    "story": "I started running seriously during a period when most of my work felt abstract — a lot of planning, coordination, and strategic thinking without much tangible output. Running gave me something the rest of my life wasn't: an immediate, unambiguous measurement of progress. The 2:53 came after three years of consistent training and two failed qualifier attempts. The lesson I keep carrying back to work is that compounding matters more than intensity — the athletes who run every day at moderate effort almost always beat the ones who train in spikes."
   }
 ]
