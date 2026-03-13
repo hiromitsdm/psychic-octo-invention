@@ -4,6 +4,7 @@
     "image": "images/student leadership.jpeg",
     "description": "Received the 2024 MIT System Design and Management Student Leadership Award, recognizing exceptional strategic contributions, leadership, innovation, and systems thinking. Recognized for organizing the Innovation Discovery Japan tour, co-leading the Bay Area Tech Trek, serving as marketing and communications lead for the Netherlands Tech Trek, and contributing to MIT Driverless, MIT Sloan Mobility Club, MIT Motorsports, and the Japanese student community at MIT.",
     "year": 2024,
+    "yearEnd": 2024,
     "story": "I came to SDM to learn systems thinking — I didn't expect the most important systems I'd work on to be people systems. Organizing the Japan Trek meant coordinating across time zones, cultural expectations, and competing priorities before I'd even finished my first semester. The Bay Area and Netherlands Treks added more complexity: different stakeholders, different goals, different definitions of what a successful visit looks like. What I kept finding was that the connective tissue between technical and human systems is exactly where I want to work. The award surprised me. I was just trying to make things run well."
   },
   {
@@ -11,6 +12,7 @@
     "image": "images/idj.png",
     "description": "Served as President of Innovation Discovery Japan 2025 (IDJ25), MIT's annual tech trek bringing students and researchers to Japan to explore the country's technology industries, startups, and research institutes. Led the full organizing team, overseeing program design, company visit curation, logistics, and team operations to deliver an immersive experiential learning program for MIT participants.",
     "year": 2025,
+    "yearEnd": 2025,
     "story": "Leading IDJ25 meant being accountable for every part of the experience — from the first company email to the last debrief conversation in Tokyo. What I underestimated was how much the president role is about holding context: knowing why we chose each visit, what each participant was hoping to get out of the trip, and how to recover when things didn't go as planned. Japan's innovation ecosystem is genuinely different from Silicon Valley's, and the program only works if participants leave with that as a felt insight, not just an intellectual one. Getting that right required building a team that cared about the same thing I did."
   },
   {
@@ -18,6 +20,7 @@
     "image": "images/ev platform.jpg",
     "description": "Contributed to MIT's Battery Electric Vehicle Platforms technology roadmap (2BEV), a level-2 roadmap scoping the full BEV platform — from battery pack and power inverter to electric drivetrain and onboard charger. The roadmap applies OPM modeling, DSM decomposition, and figures of merit analysis to chart a path toward 1000 km range and 50 km/min charge rates by 2035, with five prioritized R&D projects including sodium-ion battery infusion, battery pack modularization, solid-state batteries, and wireless charging.",
     "year": 2025,
+    "yearEnd": 2025,
     "story": "This roadmap connected directly to work I'd done at Toyota — years of negotiating platform sharing across vehicle companies gave me a concrete sense of what 'modular' actually means under production constraints. The academic framing pushed me to be more explicit: OPM diagrams and DSM decompositions force you to write down the assumptions that practitioners usually leave unspoken. The financial model was the most clarifying exercise: when you chart discounted cash flows over 16 years to break even, you stop treating architectural decisions as technical choices and start treating them as bets. That shift in framing changed how I think about platform strategy."
   },
   {
@@ -33,6 +36,7 @@
     "image": "images/ford ev.jpg",
     "description": "Created a new holistic package of supplier sourcing documents from scratch to discover new suppliers for projects and simplify the process based on the first principles thinking, resulting in an 87% content reduction while maintaining its efficiency. Completed a concept paper submission for a tax credit application based on competitive benchmarking with cross-functional departments, such as engineering, marketing, finance, and manufacturing, anticipating its value of more than hundreds of millions for the project. Invented a new product development process concept to consider to work in ambiguity with agility: Phased Agile with Rigid Gate.",
     "year": 2024,
+    "yearEnd": 2024,
     "story": "I came into the Ford program expecting to work on EV hardware — and instead spent most of my time redesigning the processes around it. The supplier sourcing documents we inherited were built for a slower era: dense, repetitive, and impossible to navigate for suppliers who hadn't worked with Ford before. Cutting 87% of the content while keeping the process intact forced me to ask what each requirement was actually for. The Phased Agile with Rigid Gate concept came out of that same frustration — the team needed to move fast in early stages, but the downstream manufacturing commitments meant we couldn't afford to replay decisions. The framework was an attempt to protect both."
   },
   {
@@ -40,6 +44,7 @@
     "image": "images/apple park.jpg",
     "description": "As an MIT-Riccio Engineering Leadership Resident, embedded with Apple's product architecture team to work on early-stage design for next-generation products. Focused on cross-functional coordination between design, engineering, and supply chain during concept-phase decision making.",
     "year": 2025,
+    "yearEnd": 2025,
     "story": "The thing that surprised me most about Apple wasn't the secrecy — it was how much ambiguity exists at the concept stage of a product that millions of people will eventually hold in their hands. My job was to help structure the decision process for problems that didn't yet have well-defined requirements. That experience reframed how I think about engineering leadership: the highest-leverage moment isn't optimizing a design, it's asking the right question before the design space closes."
   },
   {
@@ -63,6 +68,7 @@
     "image": "images/boston.jpeg",
     "description": "Trained for and completed a qualifying marathon with a 2:53:25 finish, securing a Boston Marathon qualifier. Developed a structured 18-week training plan balancing high-mileage weeks with engineering coursework and team leadership responsibilities at MIT.",
     "year": 2026,
+    "yearEnd": 2026,
     "story": "I started running seriously during a period when most of my work felt abstract — a lot of planning, coordination, and strategic thinking without much tangible output. Running gave me something the rest of my life wasn't: an immediate, unambiguous measurement of progress. The 2:53 came after three years of consistent training and two failed qualifier attempts. The lesson I keep carrying back to work is that compounding matters more than intensity — the athletes who run every day at moderate effort almost always beat the ones who train in spikes."
   }
 ]

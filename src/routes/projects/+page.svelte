@@ -10,7 +10,7 @@
   let years = projects.map(proj => proj.year);
   let range = Math.max(...years) - Math.min(...years);
 
-  $: barData = d3.rollups(projects, v => v.length, d => d.year)
+  $: barData = d3.rollups(projects, v => v.length, d => d.yearEnd)
     .map(([year, count]) => ({ label: String(year), value: count }));
 
   let rawData = [];
