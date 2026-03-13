@@ -71,15 +71,15 @@
         />
         <line
           x1={xScale(maxBar.label) + xScale.bandwidth()}
-          y1={yScale(maxBar.value) + (innerHeight - yScale(maxBar.value)) / 2}
+          y1={yScale(maxBar.value) + (innerHeight - yScale(maxBar.value)) / 4}
           x2={xScale(maxBar.label) + xScale.bandwidth() + 30}
-          y2={yScale(maxBar.value) + (innerHeight - yScale(maxBar.value)) / 2}
+          y2={yScale(maxBar.value) + (innerHeight - yScale(maxBar.value)) / 4}
           stroke="currentColor"
           stroke-width="1"
         />
         <text
           x={xScale(maxBar.label) + xScale.bandwidth() + 35}
-          y={yScale(maxBar.value) + (innerHeight - yScale(maxBar.value)) / 2}
+          y={yScale(maxBar.value) + (innerHeight - yScale(maxBar.value)) / 4}
           dominant-baseline="middle"
           class="annotation">
           Year with most projects
