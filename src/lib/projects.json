@@ -1,11 +1,27 @@
 [
   {
+    "title": "Toyota Assistant Manager of Body Engineering",
+    "image": "images/gryaris body.jpg",
+    "description": "Promoted underbody structure sharing with 2 types of vehicles across 3 vehicle companies to optimize structure of installed parts, creating information sharing system between related departments using Toyota Production System approach, executing agile development with overall vehicle planning departments and vehicle body performance evaluation departments.",
+    "year": 2013,
+    "yearEnd": 2023,
+    "story": "Standardization sounds straightforward until you're in a room with engineers from three vehicle companies who each have excellent reasons why their variant is the one that should become the standard. This project taught me that the hardest part of platform engineering isn't the geometry — it's building enough shared context that people can argue about trade-offs rather than talking past each other. The patent came out of a discussion with various people where we finally found the geometry that satisfied everyone's constraints. (14 in total patents & similar rights so far)"
+  },
+  {
     "title": "2024 MIT SDM Student Leadership Award",
     "image": "images/student leadership.jpeg",
     "description": "Received the 2024 MIT System Design and Management Student Leadership Award, recognizing exceptional strategic contributions, leadership, innovation, and systems thinking. Recognized for organizing the Innovation Discovery Japan tour, co-leading the Bay Area Tech Trek, serving as marketing and communications lead for the Netherlands Tech Trek, and contributing to MIT Driverless, MIT Sloan Mobility Club, MIT Motorsports, and the Japanese student community at MIT.",
     "year": 2024,
     "yearEnd": 2024,
     "story": "I came to SDM to learn systems thinking — I didn't expect the most important systems I'd work on to be people systems. Organizing the Japan Trek meant coordinating across time zones, cultural expectations, and competing priorities before I'd even finished my first semester. The Bay Area and Netherlands Treks added more complexity: different stakeholders, different goals, different definitions of what a successful visit looks like. What I kept finding was that the connective tissue between technical and human systems is exactly where I want to work. The award surprised me. I was just trying to make things run well."
+  },
+  {
+    "title": "Ford Strategy & Planning Leadership Program for Advanced EV Development",
+    "image": "images/ford ev.jpg",
+    "description": "Created a new holistic package of supplier sourcing documents from scratch to discover new suppliers for projects and simplify the process based on the first principles thinking, resulting in an 87% content reduction while maintaining its efficiency. Completed a concept paper submission for a tax credit application based on competitive benchmarking with cross-functional departments, such as engineering, marketing, finance, and manufacturing, anticipating its value of more than hundreds of millions for the project. Invented a new product development process concept to consider to work in ambiguity with agility: Phased Agile with Rigid Gate.",
+    "year": 2024,
+    "yearEnd": 2024,
+    "story": "I came into the Ford program expecting to work on EV hardware — and instead spent most of my time redesigning the processes around it. The supplier sourcing documents we inherited were built for a slower era: dense, repetitive, and impossible to navigate for suppliers who hadn't worked with Ford before. Cutting 87% of the content while keeping the process intact forced me to ask what each requirement was actually for. The Phased Agile with Rigid Gate concept came out of that same frustration — the team needed to move fast in early stages, but the downstream manufacturing commitments meant we couldn't afford to replay decisions. The framework was an attempt to protect both."
   },
   {
     "title": "MIT Innovation Discovery Japan 2025 — President",
@@ -22,22 +38,6 @@
     "year": 2025,
     "yearEnd": 2025,
     "story": "This roadmap connected directly to work I'd done at Toyota — years of negotiating platform sharing across vehicle companies gave me a concrete sense of what 'modular' actually means under production constraints. The academic framing pushed me to be more explicit: OPM diagrams and DSM decompositions force you to write down the assumptions that practitioners usually leave unspoken. The financial model was the most clarifying exercise: when you chart discounted cash flows over 16 years to break even, you stop treating architectural decisions as technical choices and start treating them as bets. That shift in framing changed how I think about platform strategy."
-  },
-  {
-    "title": "Toyota Assistant Manager of Body Engineering",
-    "image": "images/gryaris body.jpg",
-    "description": "Promoted underbody structure sharing with 2 types of vehicles across 3 vehicle companies to optimize structure of installed parts, creating information sharing system between related departments using Toyota Production System approach, executing agile development with overall vehicle planning departments and vehicle body performance evaluation departments.",
-    "year": 2013,
-    "yearEnd": 2023,
-    "story": "Standardization sounds straightforward until you're in a room with engineers from three vehicle companies who each have excellent reasons why their variant is the one that should become the standard. This project taught me that the hardest part of platform engineering isn't the geometry — it's building enough shared context that people can argue about trade-offs rather than talking past each other. The patent came out of a discussion with various people where we finally found the geometry that satisfied everyone's constraints. (14 in total patents & similar rights so far)"
-  },
-  {
-    "title": "Ford Strategy & Planning Leadership Program for Advanced EV Development",
-    "image": "images/ford ev.jpg",
-    "description": "Created a new holistic package of supplier sourcing documents from scratch to discover new suppliers for projects and simplify the process based on the first principles thinking, resulting in an 87% content reduction while maintaining its efficiency. Completed a concept paper submission for a tax credit application based on competitive benchmarking with cross-functional departments, such as engineering, marketing, finance, and manufacturing, anticipating its value of more than hundreds of millions for the project. Invented a new product development process concept to consider to work in ambiguity with agility: Phased Agile with Rigid Gate.",
-    "year": 2024,
-    "yearEnd": 2024,
-    "story": "I came into the Ford program expecting to work on EV hardware — and instead spent most of my time redesigning the processes around it. The supplier sourcing documents we inherited were built for a slower era: dense, repetitive, and impossible to navigate for suppliers who hadn't worked with Ford before. Cutting 87% of the content while keeping the process intact forced me to ask what each requirement was actually for. The Phased Agile with Rigid Gate concept came out of that same frustration — the team needed to move fast in early stages, but the downstream manufacturing commitments meant we couldn't afford to replay decisions. The framework was an attempt to protect both."
   },
   {
     "title": "MIT/Apple Graduate Engineering Leadership Program as Product Architecture Designer",
