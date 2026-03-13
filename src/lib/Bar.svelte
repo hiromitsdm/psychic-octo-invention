@@ -26,12 +26,23 @@
 
   $: if (xAxis && yAxis) {
     d3.select(xAxis).call(d3.axisBottom(xScale));
-    d3.select(yAxis).call(d3.axisLeft(yScale));
+    d3.select(yAxis).call(
+      d3.axisLeft(yScale)
+        .tickFormat(d => Number.isInteger(d) ? d : "")
+        .tickValues(d3.range(0, d3.max(data, d => d.value) + 1))
+    );
   }
 </script>
 
 <div class="container">
   <svg viewBox="0 0 {width} {height}">
+    <text
+      x={margin.left + innerWidth / 2}
+      y={margin.top / 2}
+      text-anchor="middle"
+      class="chart-title">
+      Projects per Year
+    </text>
     <g transform="translate({margin.left}, {margin.top + innerHeight})"
        bind:this={xAxis} />
     <g transform="translate({margin.left}, {margin.top})"
@@ -46,6 +57,21 @@
           fill={colorScale(d.label)}
         />
       {/each}
+      <text
+        x={innerWidth / 2}
+        y={innerHeight + margin.bottom + 10}
+        text-anchor="middle"
+        class="axis-label">
+        Year
+      </text>
+      <text
+        x={-(innerHeight / 2)}
+        y={-margin.left + 30}
+        text-anchor="middle"
+        transform="rotate(-90)"
+        class="axis-label">
+        Number of Projects
+      </text>
     </g>
   </svg>
   <ul class="legend">
@@ -92,5 +118,16 @@
     height: 12px;
     background-color: var(--color);
     flex-shrink: 0;
+  }
+
+  .chart-title {
+    font-size: 1em;
+    font-weight: bold;
+    fill: currentColor;
+  }
+
+  .axis-label {
+    font-size: 0.8em;
+    fill: currentColor;
   }
 </style>
