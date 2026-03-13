@@ -36,28 +36,67 @@
   }
 </script>
 
-<svg viewBox="0 0 {width} {height}">
-  <g transform="translate({margin.left}, {margin.top + innerHeight})"
-     bind:this={xAxis} />
-  <g transform="translate({margin.left}, {margin.top})"
-     bind:this={yAxis} />
-  <g transform="translate({margin.left}, {margin.top})">
+<div class="container">
+  <svg viewBox="0 0 {width} {height}">
+    <g transform="translate({margin.left}, {margin.top + innerHeight})"
+       bind:this={xAxis} />
+    <g transform="translate({margin.left}, {margin.top})"
+       bind:this={yAxis} />
+    <g transform="translate({margin.left}, {margin.top})">
+      {#each data as d}
+        <rect
+          x={xScale(d.label)}
+          y={yScale(d.value)}
+          width={xScale.bandwidth()}
+          height={innerHeight - yScale(d.value)}
+          fill={colorScale(d.label)}
+        />
+      {/each}
+    </g>
+  </svg>
+  <ul class="legend">
     {#each data as d}
-      <rect
-        x={xScale(d.label)}
-        y={yScale(d.value)}
-        width={xScale.bandwidth()}
-        height={innerHeight - yScale(d.value)}
-        fill={colorScale(d.label)}
-      />
+      <li style="--color: {colorScale(d.label)}">
+        <span class="swatch"></span>
+        {d.label} <em>({d.value})</em>
+      </li>
     {/each}
-  </g>
-</svg>
+  </ul>
+</div>
 
 <style>
   svg {
     max-width: 100%;
     height: auto;
     overflow: visible;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .legend {
+    flex: 1;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .swatch {
+    width: 12px;
+    height: 12px;
+    background-color: var(--color);
+    flex-shrink: 0;
   }
 </style>
