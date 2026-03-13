@@ -87,7 +87,7 @@
       {/if}
       <text
         x={innerWidth / 2}
-        y={innerHeight + margin.bottom + 10}
+        y={innerHeight + margin.bottom - 40}
         text-anchor="middle"
         class="axis-label">
         Year
