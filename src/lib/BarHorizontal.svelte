@@ -77,9 +77,9 @@
           stroke-width="1"
         />
         <text
-          x={xScale(maxBar.value) / 2 + 8}
-          y={yScale(maxBar.label) + yScale.bandwidth() + 12}
-          dominant-baseline="middle"
+          x={xScale(maxBar.value) / 2}
+          y={yScale(maxBar.label) + yScale.bandwidth() + 30}
+          text-anchor="middle"
           class="annotation">
           Most lines of code
         </text>
