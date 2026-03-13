@@ -10,9 +10,15 @@
   let range = Math.max(...years) - Math.min(...years);
 
   let rawData = [];
+  let wrangled = [];
 
   onMount(async () => {
     rawData = await d3.json(`${base}/lab6_example.json`);
+    wrangled = d3.rollups(
+      rawData,
+      v => d3.sum(v, d => d.lines),
+      d => d.language
+    );
     console.log(rawData);
   });
 </script>
@@ -24,6 +30,11 @@
 <h1>{projects.length} Projects over {range} Years</h1>
 
 <p>Scroll down to see my a timeline of my projects and how they've contributed to my professional and personal life</p>
+
+<section>
+  <h2>Data wrangling result</h2>
+  <pre>{JSON.stringify(wrangled, null, 2)}</pre>
+</section>
 
 <ProjectNarrative />
 
