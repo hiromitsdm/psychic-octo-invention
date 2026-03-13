@@ -6,7 +6,7 @@
 
   export let data = [];
 
-  let margin = { top: 20, right: 20, bottom: 30, left: 60 };
+  let margin = { top: 40, right: 150, bottom: 80, left: 60 };
   let innerWidth  = width  - margin.left - margin.right;
   let innerHeight = height - margin.top  - margin.bottom;
 
@@ -21,6 +21,8 @@
 
   $: colorScale = d3.scaleOrdinal(d3.schemeTableau10)
     .domain(data.map(d => d.label));
+
+  $: maxBar = d3.greatest(data, d => d.value);
 
   let xAxis, yAxis;
 
@@ -57,6 +59,32 @@
           fill={colorScale(d.label)}
         />
       {/each}
+      {#if maxBar}
+        <rect
+          x={xScale(maxBar.label)}
+          y={yScale(maxBar.value)}
+          width={xScale.bandwidth()}
+          height={innerHeight - yScale(maxBar.value)}
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        />
+        <line
+          x1={xScale(maxBar.label) + xScale.bandwidth()}
+          y1={yScale(maxBar.value) + (innerHeight - yScale(maxBar.value)) / 2}
+          x2={xScale(maxBar.label) + xScale.bandwidth() + 30}
+          y2={yScale(maxBar.value) + (innerHeight - yScale(maxBar.value)) / 2}
+          stroke="currentColor"
+          stroke-width="1"
+        />
+        <text
+          x={xScale(maxBar.label) + xScale.bandwidth() + 35}
+          y={yScale(maxBar.value) + (innerHeight - yScale(maxBar.value)) / 2}
+          dominant-baseline="middle"
+          class="annotation">
+          Year with most projects
+        </text>
+      {/if}
       <text
         x={innerWidth / 2}
         y={innerHeight + margin.bottom + 10}
@@ -129,5 +157,11 @@
   .axis-label {
     font-size: 0.8em;
     fill: currentColor;
+  }
+
+  .annotation {
+    font-size: 0.7em;
+    fill: black;
+    font-style: italic;
   }
 </style>
