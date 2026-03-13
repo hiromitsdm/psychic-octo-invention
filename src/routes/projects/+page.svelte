@@ -10,6 +10,9 @@
   let years = projects.map(proj => proj.year);
   let range = Math.max(...years) - Math.min(...years);
 
+  $: barData = d3.rollups(projects, v => v.length, d => d.year)
+    .map(([year, count]) => ({ label: String(year), value: count }));
+
   let rawData = [];
   let wrangled = [];
   let percentages = [];
@@ -39,7 +42,7 @@
 
 <p>Scroll down to see my a timeline of my projects and how they've contributed to my professional and personal life</p>
 
-<Bar />
+<Bar data={barData} />
 
 <section>
   <h2>Data wrangling result</h2>
