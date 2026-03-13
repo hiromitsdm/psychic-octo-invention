@@ -70,16 +70,16 @@
         />
         <line
           x1={xScale(maxBar.value) / 2}
-          y1={yScale(maxBar.label) - 5}
+          y1={yScale(maxBar.label)}
           x2={xScale(maxBar.value) / 2}
-          y2={yScale(maxBar.label) - 25}
+          y2={yScale(maxBar.label) + yScale.bandwidth()}
           stroke="currentColor"
           stroke-width="1"
         />
         <text
-          x={xScale(maxBar.value) / 2}
-          y={yScale(maxBar.label) - 28}
-          text-anchor="middle"
+          x={xScale(maxBar.value) / 2 + 8}
+          y={yScale(maxBar.label) + yScale.bandwidth() / 2}
+          dominant-baseline="middle"
           class="annotation">
           Most lines of code
         </text>
