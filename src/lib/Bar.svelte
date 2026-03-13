@@ -37,6 +37,10 @@
 </script>
 
 <svg viewBox="0 0 {width} {height}">
+  <g transform="translate({margin.left}, {margin.top + innerHeight})"
+     bind:this={xAxis} />
+  <g transform="translate({margin.left}, {margin.top})"
+     bind:this={yAxis} />
   <g transform="translate({margin.left}, {margin.top})">
     {#each data as d}
       <rect
@@ -48,10 +52,6 @@
       />
     {/each}
   </g>
-  <g transform="translate({margin.left}, {margin.top + innerHeight})"
-     bind:this={xAxis} />
-<g transform="translate({margin.left}, {margin.top})"
-     bind:this={yAxis} />
 </svg>
 
 <style>
