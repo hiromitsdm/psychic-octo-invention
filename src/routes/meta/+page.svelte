@@ -3,6 +3,7 @@
   import { onMount } from 'svelte';
   import * as d3 from 'd3';
   import BarHorizontal from '$lib/BarHorizontal.svelte';
+  import { computePosition, autoPlacement, offset } from '@floating-ui/dom';
 
   let locData = [];
   let barData = [];
@@ -68,6 +69,25 @@
   let hoveredIndex = -1;
   $: hoveredCommit = commits[hoveredIndex] ?? hoveredCommit ?? {};
   let cursor = {x: 0, y: 0};
+  let commitTooltip;
+  let tooltipPosition = {x: 0, y: 0};
+
+  async function dotInteraction(index, evt) {
+    let hoveredDot = evt.target;
+    if (evt.type === "mouseenter") {
+      hoveredIndex = index;
+      cursor = {x: evt.x, y: evt.y};
+      tooltipPosition = await computePosition(hoveredDot, commitTooltip, {
+        strategy: "fixed",
+        middleware: [
+          offset(5),
+          autoPlacement()
+        ],
+      });
+    } else if (evt.type === "mouseleave") {
+      hoveredIndex = -1;
+    }
+  }
 
   $: {
     d3.select(xAxis).call(d3.axisBottom(xScale).tickFormat(d3.timeFormat("%b %d, %Y")));
@@ -143,8 +163,8 @@
   <g class="dots">
     {#each commits as commit, index}
       <circle
-        on:mouseenter={evt => { hoveredIndex = index; cursor = {x: evt.x, y: evt.y}; }}
-        on:mouseleave={() => hoveredIndex = -1}
+        on:mouseenter={evt => dotInteraction(index, evt)}
+        on:mouseleave={evt => dotInteraction(index, evt)}
         cx={xScale(commit.datetime)}
         cy={yScale(commit.hourFrac)}
         r={rScale(commit.totalLines)}
@@ -155,7 +175,7 @@
   </g>
 </svg>
 
-<dl class="info tooltip" hidden={hoveredIndex === -1} style="top: {cursor.y}px; left: {cursor.x}px">
+<dl class="info tooltip" hidden={hoveredIndex === -1} style="top: {tooltipPosition.y}px; left: {tooltipPosition.x}px" bind:this={commitTooltip}>
   <dt>Commit</dt>
   <dd><a href={hoveredCommit.url} target="_blank">{hoveredCommit.id}</a></dd>
   <dt>Date</dt>
