@@ -154,7 +154,7 @@
   </g>
 </svg>
 
-<dl class="info tooltip">
+<dl class="info tooltip" hidden={hoveredIndex === -1}>
   <dt>Commit</dt>
   <dd><a href={hoveredCommit.url} target="_blank">{hoveredCommit.id}</a></dd>
   <dt>Date</dt>
@@ -183,6 +183,13 @@
     grid-template-columns: auto 1fr;
     gap: 0.25em 1em;
     margin: 0;
+    transition-duration: 500ms;
+    transition-property: opacity, visibility;
+  }
+
+  dl.info[hidden]:not(:hover, :focus-within) {
+    opacity: 0;
+    visibility: hidden;
   }
 
   dl.info dt {
