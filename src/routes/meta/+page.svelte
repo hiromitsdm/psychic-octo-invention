@@ -86,7 +86,7 @@
     }));
     barData = d3.rollups(locData, v => v.length, d => d.type)
       .map(([lang, count]) => ({ label: lang, value: count }));
-    commits = d3.groups(locData, d => d.commit).map(([commit, lines]) => {
+    commits = d3.sort(d3.groups(locData, d => d.commit).map(([commit, lines]) => {
       let first = lines[0];
       let {author, date, time, timezone, datetime} = first;
       let ret = {
@@ -98,7 +98,7 @@
         lines: lines
       };
       return ret;
-    });
+    }), d => -d.totalLines);
   });
 </script>
 
