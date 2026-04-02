@@ -65,6 +65,9 @@
     .domain(d3.extent(commits, d => d.totalLines))
     .range([5, 30]);
 
+  let hoveredIndex = -1;
+  $: hoveredCommit = commits[hoveredIndex] ?? hoveredCommit ?? {};
+
   $: {
     d3.select(xAxis).call(d3.axisBottom(xScale).tickFormat(d3.timeFormat("%b %d, %Y")));
     d3.select(yAxis).call(d3.axisLeft(yScale).tickFormat(d => String(d % 24).padStart(2, "0") + ":00"));
@@ -139,6 +142,8 @@
   <g class="dots">
     {#each commits as commit, index}
       <circle
+        on:mouseenter={() => hoveredIndex = index}
+        on:mouseleave={() => hoveredIndex = -1}
         cx={xScale(commit.datetime)}
         cy={yScale(commit.hourFrac)}
         r={rScale(commit.totalLines)}
@@ -149,6 +154,19 @@
   </g>
 </svg>
 
+<dl class="info tooltip">
+  <dt>Commit</dt>
+  <dd><a href={hoveredCommit.url} target="_blank">{hoveredCommit.id}</a></dd>
+  <dt>Date</dt>
+  <dd>{hoveredCommit.datetime?.toLocaleString("en", {dateStyle: "full"})}</dd>
+  <dt>Time</dt>
+  <dd>{hoveredCommit.datetime?.toLocaleString("en", {timeStyle: "short"})}</dd>
+  <dt>Author</dt>
+  <dd>{hoveredCommit.author}</dd>
+  <dt>Lines edited</dt>
+  <dd>{hoveredCommit.totalLines}</dd>
+</dl>
+
 <BarHorizontal data={barData} />
 
 <style>
@@ -158,6 +176,35 @@
 
   .gridlines {
     stroke-opacity: .2;
+  }
+
+  dl.info {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.25em 1em;
+    margin: 0;
+  }
+
+  dl.info dt {
+    opacity: 0.6;
+    font-size: 0.8em;
+    text-transform: uppercase;
+  }
+
+  dl.info dd {
+    margin: 0;
+    font-weight: bold;
+  }
+
+  .tooltip {
+    position: fixed;
+    top: 1em;
+    left: 1em;
+    background: var(--color-bg, white);
+    border: 1px solid oklch(50% 0.1 250 / 40%);
+    border-radius: 0.5em;
+    padding: 0.75em 1em;
+    box-shadow: 0 2px 8px oklch(0% 0 0 / 20%);
   }
 
   circle {
