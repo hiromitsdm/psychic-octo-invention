@@ -61,7 +61,7 @@
     .domain([24, 0])
     .range([usableArea.bottom, usableArea.top]);
 
-  $: rScale = d3.scaleLinear()
+  $: rScale = d3.scaleSqrt()
     .domain(d3.extent(commits, d => d.totalLines))
     .range([5, 30]);
 
