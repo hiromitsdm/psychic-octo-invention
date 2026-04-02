@@ -2,12 +2,12 @@
   import * as d3 from 'd3';
 
   let width = 500;
-  let height = 220;
+  let height = 160;
 
   export let data = [];
   export let title = "";
 
-  let margin = { top: 30, right: 140, bottom: 45, left: 70 };
+  let margin = { top: 25, right: 140, bottom: 35, left: 70 };
   let innerWidth  = width  - margin.left - margin.right;
   let innerHeight = height - margin.top  - margin.bottom;
 
