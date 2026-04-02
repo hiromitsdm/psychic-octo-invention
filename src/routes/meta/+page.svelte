@@ -19,7 +19,7 @@
   usableArea.width = usableArea.right - usableArea.left;
   usableArea.height = usableArea.bottom - usableArea.top;
 
-  let xAxis, yAxis;
+  let xAxis, yAxis, yAxisGridlines;
 
   const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
@@ -64,6 +64,11 @@
   $: {
     d3.select(xAxis).call(d3.axisBottom(xScale).tickFormat(d3.timeFormat("%b %d, %Y")));
     d3.select(yAxis).call(d3.axisLeft(yScale).tickFormat(d => String(d % 24).padStart(2, "0") + ":00"));
+    d3.select(yAxisGridlines).call(
+      d3.axisLeft(yScale)
+        .tickFormat("")
+        .tickSize(-usableArea.width)
+    );
   }
 
   onMount(async () => {
@@ -124,6 +129,7 @@
 
 <h3>Commits by time of day</h3>
 <svg viewBox="0 0 {width} {height}">
+  <g class="gridlines" transform="translate({usableArea.left}, 0)" bind:this={yAxisGridlines} />
   <g transform="translate(0, {usableArea.bottom})" bind:this={xAxis} />
   <g transform="translate({usableArea.left}, 0)" bind:this={yAxis} />
   <g class="dots">
@@ -143,6 +149,10 @@
 <style>
   svg {
     overflow: visible;
+  }
+
+  .gridlines {
+    stroke-opacity: .2;
   }
 
   .stats {
