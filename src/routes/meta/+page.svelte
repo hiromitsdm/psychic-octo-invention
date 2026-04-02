@@ -200,11 +200,12 @@
     position: fixed;
     top: 1em;
     left: 1em;
-    background: var(--color-bg, white);
-    border: 1px solid oklch(50% 0.1 250 / 40%);
+    background: oklch(100% 0% 0 / 80%);
     border-radius: 0.5em;
     padding: 0.75em 1em;
-    box-shadow: 0 2px 8px oklch(0% 0 0 / 20%);
+    box-shadow: 0 4px 20px oklch(0% 0 0 / 15%);
+    backdrop-filter: blur(8px);
+    color: black;
   }
 
   circle {
