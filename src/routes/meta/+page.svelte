@@ -156,7 +156,6 @@
 </svg>
 
 <dl class="info tooltip" hidden={hoveredIndex === -1} style="top: {cursor.y}px; left: {cursor.x}px">
-  {JSON.stringify(cursor, null, "\t")}
   <dt>Commit</dt>
   <dd><a href={hoveredCommit.url} target="_blank">{hoveredCommit.id}</a></dd>
   <dt>Date</dt>
@@ -207,8 +206,6 @@
 
   .tooltip {
     position: fixed;
-    top: 1em;
-    left: 1em;
     background: oklch(100% 0% 0 / 80%);
     border-radius: 0.5em;
     padding: 0.75em 1em;
