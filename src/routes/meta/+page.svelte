@@ -8,6 +8,8 @@
   let barData = [];
   let commits = [];
 
+  let width = 1000, height = 600;
+
   const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
   function timeOfDay(hour) {
@@ -91,9 +93,18 @@
   </div>
 </dl>
 
+<h3>Commits by time of day</h3>
+<svg viewBox="0 0 {width} {height}">
+  <!-- scatterplot will go here -->
+</svg>
+
 <BarHorizontal data={barData} />
 
 <style>
+  svg {
+    overflow: visible;
+  }
+
   .stats {
     display: flex;
     flex-wrap: wrap;
