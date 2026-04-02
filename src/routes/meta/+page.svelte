@@ -61,6 +61,10 @@
     .domain([24, 0])
     .range([usableArea.bottom, usableArea.top]);
 
+  $: rScale = d3.scaleLinear()
+    .domain(d3.extent(commits, d => d.totalLines))
+    .range([5, 30]);
+
   $: {
     d3.select(xAxis).call(d3.axisBottom(xScale).tickFormat(d3.timeFormat("%b %d, %Y")));
     d3.select(yAxis).call(d3.axisLeft(yScale).tickFormat(d => String(d % 24).padStart(2, "0") + ":00"));
@@ -137,8 +141,9 @@
       <circle
         cx={xScale(commit.datetime)}
         cy={yScale(commit.hourFrac)}
-        r="5"
+        r={rScale(commit.totalLines)}
         fill="steelblue"
+        fill-opacity="0.5"
       />
     {/each}
   </g>
