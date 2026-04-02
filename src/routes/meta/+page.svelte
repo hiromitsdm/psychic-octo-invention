@@ -160,6 +160,13 @@
     stroke-opacity: .2;
   }
 
+  circle {
+    transition: 200ms;
+    &:hover {
+      fill: darkgreen;
+    }
+  }
+
   .stats {
     display: flex;
     flex-wrap: wrap;
