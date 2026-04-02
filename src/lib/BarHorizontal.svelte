@@ -2,12 +2,12 @@
   import * as d3 from 'd3';
 
   let width = 500;
-  let height = 300;
+  let height = 220;
 
   export let data = [];
   export let title = "";
 
-  let margin = { top: 40, right: 200, bottom: 60, left: 80 };
+  let margin = { top: 30, right: 140, bottom: 45, left: 70 };
   let innerWidth  = width  - margin.left - margin.right;
   let innerHeight = height - margin.top  - margin.bottom;
 
@@ -80,18 +80,19 @@
       {/if}
       <text
         x={innerWidth / 2}
-        y={innerHeight + margin.bottom - 10}
+        y={innerHeight + margin.bottom - 8}
         text-anchor="middle"
         class="axis-label">
         Lines of Code
       </text>
       <text
         x={-(innerHeight / 2)}
-        y={-margin.left + 15}
+        y={-margin.left + 12}
         text-anchor="middle"
         transform="rotate(-90)"
         class="axis-label">
-        Programming Language
+        <tspan>Programming</tspan>
+        <tspan dy="1.2em" x={-(innerHeight / 2)}>Language</tspan>
       </text>
     </g>
   </svg>
@@ -142,18 +143,18 @@
   }
 
   .chart-title {
-    font-size: 1em;
+    font-size: 0.8em;
     font-weight: bold;
     fill: currentColor;
   }
 
   .axis-label {
-    font-size: 0.8em;
+    font-size: 0.65em;
     fill: currentColor;
   }
 
   .annotation {
-    font-size: 0.7em;
+    font-size: 0.6em;
     fill: currentColor;
     font-style: italic;
   }
