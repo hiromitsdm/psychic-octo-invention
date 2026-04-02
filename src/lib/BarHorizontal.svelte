@@ -18,7 +18,7 @@
   $: yScale = d3.scaleBand()
     .domain(data.map(d => d.label))
     .range([0, innerHeight])
-    .padding(0.5);
+    .padding(0.75);
 
   $: colorScale = d3.scaleOrdinal(d3.schemeTableau10)
     .domain(data.map(d => d.label));
