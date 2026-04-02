@@ -8,6 +8,33 @@
   let barData = [];
   let commits = [];
 
+  const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+  function timeOfDay(hour) {
+    if (hour >= 5 && hour < 12) return 'Morning';
+    if (hour >= 12 && hour < 17) return 'Afternoon';
+    if (hour >= 17 && hour < 21) return 'Evening';
+    return 'Night';
+  }
+
+  $: longestFile = d3.greatest(
+    d3.rollups(locData, v => v.length, d => d.file),
+    ([, n]) => n
+  )?.[0] ?? '';
+
+  $: busiestTimeOfDay = d3.greatest(
+    d3.rollups(commits, v => v.length, d => timeOfDay(d.datetime.getHours())),
+    ([, n]) => n
+  )?.[0] ?? '';
+
+  $: busiestDay = (() => {
+    const max = d3.greatest(
+      d3.rollups(commits, v => v.length, d => d.datetime.getDay()),
+      ([, n]) => n
+    );
+    return max ? days[max[0]] : '';
+  })();
+
   onMount(async () => {
     locData = await d3.csv(`${base}/loc.csv`, row => ({
       ...row,
@@ -32,7 +59,6 @@
       };
       return ret;
     });
-    console.log(commits);
   });
 </script>
 
@@ -41,6 +67,40 @@
 </svelte:head>
 
 <h1>Meta</h1>
-<p>Meta page to visualize project data.</p>
+
+<dl class="stats">
+  <dt>Total <abbr title="Lines of code">LOC</abbr></dt>
+  <dd>{locData.length}</dd>
+  <dt>Total Commits</dt>
+  <dd>{commits.length}</dd>
+  <dt>Longest File</dt>
+  <dd>{longestFile}</dd>
+  <dt>Busiest Time of Day</dt>
+  <dd>{busiestTimeOfDay}</dd>
+  <dt>Busiest Day of Week</dt>
+  <dd>{busiestDay}</dd>
+</dl>
 
 <BarHorizontal data={barData} />
+
+<style>
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(10em, 1fr));
+    gap: 0.5em 1em;
+    margin-block: 1.5em;
+  }
+
+  .stats dt {
+    font-size: 0.75em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    opacity: 0.6;
+  }
+
+  .stats dd {
+    margin: 0;
+    font-size: 2em;
+    font-weight: bold;
+  }
+</style>
