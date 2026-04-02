@@ -17,6 +17,7 @@
     }));
     barData = d3.rollups(locData, v => v.length, d => d.type)
       .map(([lang, count]) => ({ label: lang, value: count }));
+    console.log(locData);
   });
 </script>
 
