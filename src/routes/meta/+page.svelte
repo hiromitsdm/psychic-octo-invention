@@ -69,26 +69,41 @@
 <h1>Meta</h1>
 
 <dl class="stats">
-  <dt>Total <abbr title="Lines of code">LOC</abbr></dt>
-  <dd>{locData.length}</dd>
-  <dt>Total Commits</dt>
-  <dd>{commits.length}</dd>
-  <dt>Longest File</dt>
-  <dd>{longestFile}</dd>
-  <dt>Busiest Time of Day</dt>
-  <dd>{busiestTimeOfDay}</dd>
-  <dt>Busiest Day of Week</dt>
-  <dd>{busiestDay}</dd>
+  <div>
+    <dt>Total <abbr title="Lines of code">LOC</abbr></dt>
+    <dd>{locData.length}</dd>
+  </div>
+  <div>
+    <dt>Total Commits</dt>
+    <dd>{commits.length}</dd>
+  </div>
+  <div>
+    <dt>Longest File</dt>
+    <dd>{longestFile}</dd>
+  </div>
+  <div>
+    <dt>Busiest Time of Day</dt>
+    <dd>{busiestTimeOfDay}</dd>
+  </div>
+  <div>
+    <dt>Busiest Day of Week</dt>
+    <dd>{busiestDay}</dd>
+  </div>
 </dl>
 
 <BarHorizontal data={barData} />
 
 <style>
   .stats {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(10em, 1fr));
-    gap: 0.5em 1em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em 2.5em;
     margin-block: 1.5em;
+  }
+
+  .stats > div {
+    display: flex;
+    flex-direction: column;
   }
 
   .stats dt {
