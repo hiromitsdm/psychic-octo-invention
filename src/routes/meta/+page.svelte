@@ -12,7 +12,8 @@
       ...row,
       line: Number(row.line),
       length: Number(row.length),
-      depth: Number(row.depth)
+      depth: Number(row.depth),
+      date: new Date(row.datetime)
     }));
     barData = d3.rollups(locData, v => v.length, d => d.type)
       .map(([lang, count]) => ({ label: lang, value: count }));
