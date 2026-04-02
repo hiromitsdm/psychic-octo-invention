@@ -7,7 +7,7 @@
   export let data = [];
   export let title = "";
 
-  let margin = { top: 40, right: 160, bottom: 60, left: 80 };
+  let margin = { top: 40, right: 200, bottom: 60, left: 80 };
   let innerWidth  = width  - margin.left - margin.right;
   let innerHeight = height - margin.top  - margin.bottom;
 
@@ -69,18 +69,11 @@
           stroke="currentColor"
           stroke-width="2"
         />
-        <line
-          x1={xScale(maxBar.value) / 2}
-          y1={yScale(maxBar.label) + yScale.bandwidth()}
-          x2={xScale(maxBar.value) / 2}
-          y2={yScale(maxBar.label) + yScale.bandwidth() + 20}
-          stroke="currentColor"
-          stroke-width="1"
-        />
         <text
-          x={xScale(maxBar.value) / 2}
-          y={yScale(maxBar.label) + yScale.bandwidth() + 30}
-          text-anchor="middle"
+          x={xScale(maxBar.value) + 8}
+          y={yScale(maxBar.label) + yScale.bandwidth() / 2}
+          text-anchor="start"
+          dominant-baseline="middle"
           class="annotation">
           Most lines of code
         </text>
