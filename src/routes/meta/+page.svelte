@@ -20,6 +20,7 @@
     barData = d3.rollups(locData, v => v.length, d => d.type)
       .map(([lang, count]) => ({ label: lang, value: count }));
     commits = d3.groups(locData, d => d.commit);
+    console.log(commits);
   });
 </script>
 
