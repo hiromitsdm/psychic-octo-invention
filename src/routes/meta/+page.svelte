@@ -37,6 +37,19 @@
     return max ? days[max[0]] : '';
   })();
 
+  $: [minDate, maxDate] = d3.extent(commits.map(d => d.date));
+  $: maxDatePlusOne = new Date(maxDate);
+  $: maxDatePlusOne.setDate(maxDatePlusOne.getDate() + 1);
+
+  $: xScale = d3.scaleTime()
+    .domain([minDate, maxDatePlusOne])
+    .range([0, width])
+    .nice();
+
+  $: yScale = d3.scaleLinear()
+    .domain([24, 0])
+    .range([height, 0]);
+
   onMount(async () => {
     locData = await d3.csv(`${base}/loc.csv`, row => ({
       ...row,
@@ -95,7 +108,16 @@
 
 <h3>Commits by time of day</h3>
 <svg viewBox="0 0 {width} {height}">
-  <!-- scatterplot will go here -->
+  <g class="dots">
+    {#each commits as commit, index}
+      <circle
+        cx={xScale(commit.datetime)}
+        cy={yScale(commit.hourFrac)}
+        r="5"
+        fill="steelblue"
+      />
+    {/each}
+  </g>
 </svg>
 
 <BarHorizontal data={barData} />
