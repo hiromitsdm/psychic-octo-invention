@@ -156,7 +156,7 @@
   </div>
   <div>
     <dt>Longest File</dt>
-    <dd>{longestFile.split('/').pop()}</dd>
+    <dd>{longestFile.split('/').slice(-2).join('/')}</dd>
   </div>
   <div>
     <dt>Busiest Time of Day</dt>
