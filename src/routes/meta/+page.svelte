@@ -67,6 +67,7 @@
 
   let hoveredIndex = -1;
   $: hoveredCommit = commits[hoveredIndex] ?? hoveredCommit ?? {};
+  let cursor = {x: 0, y: 0};
 
   $: {
     d3.select(xAxis).call(d3.axisBottom(xScale).tickFormat(d3.timeFormat("%b %d, %Y")));
@@ -142,7 +143,7 @@
   <g class="dots">
     {#each commits as commit, index}
       <circle
-        on:mouseenter={() => hoveredIndex = index}
+        on:mouseenter={evt => { hoveredIndex = index; cursor = {x: evt.x, y: evt.y}; }}
         on:mouseleave={() => hoveredIndex = -1}
         cx={xScale(commit.datetime)}
         cy={yScale(commit.hourFrac)}
@@ -154,7 +155,8 @@
   </g>
 </svg>
 
-<dl class="info tooltip" hidden={hoveredIndex === -1}>
+<dl class="info tooltip" hidden={hoveredIndex === -1} style="top: {cursor.y}px; left: {cursor.x}px">
+  {JSON.stringify(cursor, null, "\t")}
   <dt>Commit</dt>
   <dd><a href={hoveredCommit.url} target="_blank">{hoveredCommit.id}</a></dd>
   <dt>Date</dt>
