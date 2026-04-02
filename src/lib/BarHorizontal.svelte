@@ -30,7 +30,7 @@
   $: if (xAxis && yAxis) {
     d3.select(xAxis).call(
       d3.axisBottom(xScale)
-        .tickFormat(d => Number.isInteger(d) ? d : "")
+        .ticks(Math.min(d3.max(data, d => d.value), 10))
     );
     d3.select(yAxis).call(d3.axisLeft(yScale));
   }
