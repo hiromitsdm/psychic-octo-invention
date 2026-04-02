@@ -67,9 +67,14 @@
     .range([5, 30]);
 
   let clickedCommits = [];
+
+  $: selectedLines = (clickedCommits.length > 0 ? clickedCommits.flatMap(d => d.lines) : locData);
+  $: selectedCounts = d3.rollup(selectedLines, v => v.length, d => d.type);
+  $: allTypes = Array.from(new Set(locData.map(d => d.type)));
+  $: barData = allTypes.map(type => ({ label: String(type), value: selectedCounts.get(type) ?? 0 }));
+
   let hoveredIndex = -1;
   $: hoveredCommit = commits[hoveredIndex] ?? hoveredCommit ?? {};
-  let cursor = {x: 0, y: 0};
   let commitTooltip;
   let tooltipPosition = {x: 0, y: 0};
 
@@ -77,7 +82,6 @@
     let hoveredDot = evt.target;
     if (evt.type === "mouseenter") {
       hoveredIndex = index;
-      cursor = {x: evt.x, y: evt.y};
       tooltipPosition = await computePosition(hoveredDot, commitTooltip, {
         strategy: "fixed",
         middleware: [
