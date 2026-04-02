@@ -5,6 +5,7 @@
   let height = 300;
 
   export let data = [];
+  export let title = "";
 
   let margin = { top: 40, right: 160, bottom: 60, left: 80 };
   let innerWidth  = width  - margin.left - margin.right;
@@ -42,7 +43,7 @@
       y={margin.top / 2}
       text-anchor="middle"
       class="chart-title">
-      Lines of Code by Language
+      {title}
     </text>
     <g transform="translate({margin.left}, {margin.top + innerHeight})"
        bind:this={xAxis} />
