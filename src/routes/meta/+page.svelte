@@ -172,6 +172,7 @@
   <g class="dots">
     {#each commits as commit, index}
       <circle
+        class:selected={clickedCommits.includes(commit)}
         on:mouseenter={evt => dotInteraction(index, evt)}
         on:mouseleave={evt => dotInteraction(index, evt)}
         on:click={evt => dotInteraction(index, evt)}
@@ -249,6 +250,10 @@
     &:hover {
       fill: darkgreen;
     }
+  }
+
+  .selected {
+    fill: var(--color-accent);
   }
 
   .stats {
