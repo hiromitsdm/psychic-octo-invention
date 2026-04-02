@@ -66,6 +66,7 @@
     .domain(d3.extent(commits, d => d.totalLines))
     .range([5, 30]);
 
+  let clickedCommits = [];
   let hoveredIndex = -1;
   $: hoveredCommit = commits[hoveredIndex] ?? hoveredCommit ?? {};
   let cursor = {x: 0, y: 0};
@@ -86,6 +87,14 @@
       });
     } else if (evt.type === "mouseleave") {
       hoveredIndex = -1;
+    } else if (evt.type === "click") {
+      let commit = commits[index];
+      if (!clickedCommits.includes(commit)) {
+        clickedCommits = [...clickedCommits, commit];
+      } else {
+        clickedCommits = clickedCommits.filter(c => c !== commit);
+      }
+      console.log(clickedCommits);
     }
   }
 
@@ -165,6 +174,7 @@
       <circle
         on:mouseenter={evt => dotInteraction(index, evt)}
         on:mouseleave={evt => dotInteraction(index, evt)}
+        on:click={evt => dotInteraction(index, evt)}
         cx={xScale(commit.datetime)}
         cy={yScale(commit.hourFrac)}
         r={rScale(commit.totalLines)}
