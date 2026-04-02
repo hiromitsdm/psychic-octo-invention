@@ -6,6 +6,7 @@
 
   let locData = [];
   let barData = [];
+  let commits = [];
 
   onMount(async () => {
     locData = await d3.csv(`${base}/loc.csv`, row => ({
@@ -18,7 +19,7 @@
     }));
     barData = d3.rollups(locData, v => v.length, d => d.type)
       .map(([lang, count]) => ({ label: lang, value: count }));
-    console.log(locData);
+    commits = d3.groups(locData, d => d.commit);
   });
 </script>
 
