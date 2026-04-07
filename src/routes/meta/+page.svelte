@@ -81,8 +81,13 @@
 
   $: {
     d3.select(svg).call(d3.brush()
-      .extent([[usableArea.left, usableArea.top], [usableArea.right, usableArea.bottom]]));
+      .extent([[usableArea.left, usableArea.top], [usableArea.right, usableArea.bottom]])
+      .on("start brush end", brushed));
     d3.select(svg).selectAll(".dots, .overlay ~ *").raise();
+  }
+
+  function brushed(evt) {
+    console.log(evt);
   }
 
   async function dotInteraction(index, evt) {
