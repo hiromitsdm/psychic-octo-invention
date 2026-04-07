@@ -25,7 +25,8 @@
 
   $: line = d3.line()
     .x(d => xScale(d.date))
-    .y(d => yScale(d.count));
+    .y(d => yScale(d.count))
+    .curve(d3.curveBumpX);
 
   $: if (xAxis && yAxis) {
     d3.select(xAxis).call(d3.axisBottom(xScale));
@@ -43,6 +44,14 @@
     stroke="steelblue"
     stroke-width="2"
   />
+  {#each data as d}
+    <circle
+      cx={xScale(d.date)}
+      cy={yScale(d.count)}
+      r="3"
+      fill="steelblue"
+    />
+  {/each}
 </svg>
 
 <style>
