@@ -79,7 +79,11 @@
   let tooltipPosition = {x: 0, y: 0};
   let svg;
 
-  $: d3.select(svg).call(d3.brush());
+  $: {
+    d3.select(svg).call(d3.brush()
+      .extent([[usableArea.left, usableArea.top], [usableArea.right, usableArea.bottom]]));
+    d3.select(svg).selectAll(".dots, .overlay ~ *").raise();
+  }
 
   async function dotInteraction(index, evt) {
     let hoveredDot = evt.target;
