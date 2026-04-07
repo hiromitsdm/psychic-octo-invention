@@ -52,6 +52,21 @@
       fill="steelblue"
     />
   {/each}
+  <text
+    x={usableArea.left + (usableArea.right - usableArea.left) / 2}
+    y={height - 5}
+    text-anchor="middle"
+    class="axis-label">
+    Date
+  </text>
+  <text
+    x={-(usableArea.top + (usableArea.bottom - usableArea.top) / 2)}
+    y={10}
+    text-anchor="middle"
+    transform="rotate(-90)"
+    class="axis-label">
+    Number of Lines Edited
+  </text>
 </svg>
 
 <style>
@@ -59,5 +74,14 @@
     overflow: visible;
     max-width: 100%;
     height: auto;
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  .axis-label {
+    font-size: 0.8em;
+    fill: currentColor;
   }
 </style>
