@@ -221,6 +221,13 @@
     stroke-opacity: .2;
   }
 
+  :global(.selection) {
+    fill-opacity: 0.1;
+    stroke: steelblue;
+    stroke-width: 1.5px;
+    stroke-dasharray: 4;
+  }
+
   dl.info {
     display: grid;
     grid-template-columns: auto 1fr;
