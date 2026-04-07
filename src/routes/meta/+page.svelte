@@ -3,11 +3,29 @@
   import { onMount } from 'svelte';
   import * as d3 from 'd3';
   import BarHorizontal from '$lib/BarHorizontal.svelte';
+  import LineChart from '$lib/LineChart.svelte';
   import { computePosition, autoPlacement, offset } from '@floating-ui/dom';
 
   let locData = [];
   let barData = [];
   let commits = [];
+  let linesByDate = [];
+
+  $: {
+    const rolled = d3.rollups(
+      locData,
+      v => v.length,
+      d => d3.timeDay.floor(d.datetime)
+    ).map(([date, count]) => ({ date, count }));
+
+    const [minDate, maxDate] = d3.extent(rolled, d => d.date);
+    const allDays = minDate && maxDate ? d3.timeDays(minDate, d3.timeDay.offset(maxDate, 1)) : [];
+
+    linesByDate = allDays.map(date => ({
+      date,
+      count: rolled.find(d => d.date.getTime() === date.getTime())?.count ?? 0
+    }));
+  }
 
   let width = 1000, height = 600;
   let margin = { top: 20, right: 20, bottom: 30, left: 50 };
@@ -228,6 +246,8 @@
 </dl>
 
 <BarHorizontal data={barData} title={selectedCommits.length > 0 ? `Lines of Code: ${selectedCommits.length} Selected Commits` : "Website Breakdown"} />
+
+<LineChart data={linesByDate} />
 
 <style>
   svg {
