@@ -67,8 +67,11 @@
     .range([5, 30]);
 
   let clickedCommits = [];
+  $: brushSelection = null;
+  $: brushedCommits = brushSelection ? commits.filter(isCommitBrushed) : [];
+  $: selectedCommits = Array.from(new Set([...clickedCommits, ...brushedCommits]));
 
-  $: selectedLines = (clickedCommits.length > 0 ? clickedCommits.flatMap(d => d.lines) : locData);
+  $: selectedLines = (selectedCommits.length > 0 ? selectedCommits : commits).flatMap(d => d.lines);
   $: selectedCounts = d3.rollup(selectedLines, v => v.length, d => d.type);
   $: allTypes = Array.from(new Set(locData.map(d => d.type)));
   $: barData = allTypes.map(type => ({ label: String(type), value: selectedCounts.get(type) ?? 0 }));
@@ -87,7 +90,16 @@
   }
 
   function brushed(evt) {
-    console.log(evt);
+    brushSelection = evt.selection;
+  }
+
+  function isCommitBrushed(commit) {
+    if (!brushSelection) return false;
+    let min = {x: brushSelection[0][0], y: brushSelection[0][1]};
+    let max = {x: brushSelection[1][0], y: brushSelection[1][1]};
+    let x = xScale(commit.date);
+    let y = yScale(commit.hourFrac);
+    return x >= min.x && x <= max.x && y >= min.y && y <= max.y;
   }
 
   async function dotInteraction(index, evt) {
@@ -188,7 +200,7 @@
   <g class="dots">
     {#each commits as commit, index}
       <circle
-        class:selected={clickedCommits.includes(commit)}
+        class:selected={selectedCommits.includes(commit)}
         on:mouseenter={evt => dotInteraction(index, evt)}
         on:mouseleave={evt => dotInteraction(index, evt)}
         on:click={evt => dotInteraction(index, evt)}
@@ -215,7 +227,7 @@
   <dd>{hoveredCommit.totalLines}</dd>
 </dl>
 
-<BarHorizontal data={barData} title={clickedCommits.length > 0 ? "Selected Commits Breakdown" : "Website Breakdown"} />
+<BarHorizontal data={barData} title={selectedCommits.length > 0 ? "Selected Commits Breakdown" : "Website Breakdown"} />
 
 <style>
   svg {
