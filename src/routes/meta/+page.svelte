@@ -227,7 +227,7 @@
   <dd>{hoveredCommit.totalLines}</dd>
 </dl>
 
-<BarHorizontal data={barData} title={selectedCommits.length > 0 ? "Selected Commits Breakdown" : "Website Breakdown"} />
+<BarHorizontal data={barData} title={selectedCommits.length > 0 ? `Lines of Code: ${selectedCommits.length} Selected Commits` : "Website Breakdown"} />
 
 <style>
   svg {
