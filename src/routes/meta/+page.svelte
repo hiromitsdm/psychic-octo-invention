@@ -77,6 +77,9 @@
   $: hoveredCommit = commits[hoveredIndex] ?? hoveredCommit ?? {};
   let commitTooltip;
   let tooltipPosition = {x: 0, y: 0};
+  let svg;
+
+  $: d3.select(svg).call(d3.brush());
 
   async function dotInteraction(index, evt) {
     let hoveredDot = evt.target;
@@ -169,7 +172,7 @@
 </dl>
 
 <h3>Commits by time of day</h3>
-<svg viewBox="0 0 {width} {height}">
+<svg viewBox="0 0 {width} {height}" bind:this={svg}>
   <g class="gridlines" transform="translate({usableArea.left}, 0)" bind:this={yAxisGridlines} />
   <g transform="translate(0, {usableArea.bottom})" bind:this={xAxis} />
   <g transform="translate({usableArea.left}, 0)" bind:this={yAxis} />
