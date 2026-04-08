@@ -34,6 +34,7 @@
   }
 
   let hoveredDay = null;
+  $: console.log(hoveredDay);
 
   $: dayRegions = (() => {
     if (data.length === 0) return [];
@@ -62,6 +63,16 @@
     stroke="steelblue"
     stroke-width="2"
   />
+  {#each dayRegions as region}
+    <rect
+      x={region.x}
+      y={usableArea.top}
+      width={region.width}
+      height={usableArea.bottom - usableArea.top}
+      fill="transparent"
+      on:mouseenter={() => hoveredDay = region.weekday}
+    />
+  {/each}
   {#each data as d}
     <circle
       cx={xScale(d.date)}
