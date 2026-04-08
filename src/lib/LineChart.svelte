@@ -34,7 +34,6 @@
   }
 
   let hoveredDay = null;
-  $: console.log(hoveredDay);
 
   $: dayRegions = (() => {
     if (data.length === 0) return [];
@@ -63,6 +62,18 @@
     stroke="steelblue"
     stroke-width="2"
   />
+  {#each dayRegions as region}
+    {#if region.weekday === hoveredDay}
+      <rect
+        x={region.x}
+        y={usableArea.top}
+        width={region.width}
+        height={usableArea.bottom - usableArea.top}
+        fill="var(--color-accent)"
+        opacity="0.2"
+      />
+    {/if}
+  {/each}
   {#each dayRegions as region}
     <rect
       x={region.x}
