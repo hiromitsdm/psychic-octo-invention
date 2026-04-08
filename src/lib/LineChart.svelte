@@ -32,6 +32,24 @@
     d3.select(xAxis).call(d3.axisBottom(xScale));
     d3.select(yAxis).call(d3.axisLeft(yScale));
   }
+
+  let hoveredDay = null;
+
+  $: dayRegions = (() => {
+    if (data.length === 0) return [];
+    return data.map((d, i, arr) => {
+      const prev = arr[i - 1];
+      const next = arr[i + 1];
+      const left = prev ? new Date((d.date.getTime() + prev.date.getTime()) / 2) : d.date;
+      const right = next ? new Date((d.date.getTime() + next.date.getTime()) / 2) : d.date;
+      return {
+        date: d.date,
+        weekday: d.date.toLocaleString("en", { weekday: "long" }),
+        x: xScale(left),
+        width: xScale(right) - xScale(left),
+      };
+    });
+  })();
 </script>
 
 <h3>Lines Edited by Day</h3>
