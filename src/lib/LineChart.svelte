@@ -54,6 +54,7 @@
 </script>
 
 <h3>Lines Edited by Day</h3>
+<p>Hovered day: {hoveredDay ?? "none"}</p>
 <svg viewBox="0 0 {width} {height}">
   <g transform="translate(0, {usableArea.bottom})" bind:this={xAxis} />
   <g transform="translate({usableArea.left}, 0)" bind:this={yAxis} />
