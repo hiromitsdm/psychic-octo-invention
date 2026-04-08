@@ -52,7 +52,7 @@
   })();
 </script>
 
-<h3>Lines Edited by Day</h3>
+<h3>Lines Edited {hoveredDay ? `on ${hoveredDay}` : "by Day"}</h3>
 <svg viewBox="0 0 {width} {height}" on:mouseleave={() => hoveredDay = null}>
   <g transform="translate(0, {usableArea.bottom})" bind:this={xAxis} />
   <g transform="translate({usableArea.left}, 0)" bind:this={yAxis} />
@@ -85,12 +85,24 @@
     />
   {/each}
   {#each data as d}
+    {@const isHighlighted = d.date.toLocaleString("en", { weekday: "long" }) === hoveredDay}
     <circle
       cx={xScale(d.date)}
       cy={yScale(d.count)}
-      r="3"
-      fill="steelblue"
+      r={isHighlighted ? 5 : 3}
+      fill={isHighlighted ? "var(--color-accent)" : "steelblue"}
     />
+    {#if isHighlighted}
+      <text
+        x={xScale(d.date)}
+        y={usableArea.top + 15}
+        text-anchor="middle"
+        font-size="12"
+        fill="var(--color-accent)"
+      >
+        {Math.round(d.count)}
+      </text>
+    {/if}
   {/each}
   <text
     x={usableArea.left + (usableArea.right - usableArea.left) / 2}
